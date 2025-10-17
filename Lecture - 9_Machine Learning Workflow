@@ -1,0 +1,172 @@
+Lecture 9
+
+Machine Learning Workflow
+
+Introduction:
+
+In this final lecture of the module, we’ll explore the basic vocabulary and workflow of Machine Learning (ML) — the foundational process that guides every ML project, from defining a problem to deploying a working model.
+
+By the end of this lecture, you should understand:
+
+The steps in a typical machine learning workflow,
+
+The core concepts and terms used in ML, and
+
+The essential tools and libraries commonly used in real-world applications.
+
+This knowledge sets the stage for deeper learning in topics like exploratory data analysis, data cleaning, and statistical inference in upcoming modules.
+
+Foundational Knowledge and Tools:
+
+Before we dive into the workflow itself, it’s important to have a few key prerequisites:
+
+1. Python Programming Environment:
+
+Machine learning is typically implemented using Python, with a focus on:
+
+Jupyter Notebooks / iPython: For interactive coding and visualization.
+
+NumPy: For numerical analysis and matrix operations.
+
+Pandas: For reading and manipulating data as DataFrames.
+
+Matplotlib & Seaborn: For creating plots and visualizations.
+
+Scikit-learn: For traditional ML models like decision trees, regression, and clustering.
+
+TensorFlow & Keras: For deep learning models and neural networks.
+
+2. Mathematical Foundations:
+
+A solid understanding of statistics and linear algebra is crucial for working effectively with ML models.
+
+Statistics: Concepts like probability, distributions, and Bayes’ Rule are vital.
+
+Linear Algebra: Helps in understanding data transformations, feature spaces, and neural network operations.
+
+Many practitioners overlook these foundations — leading to misinterpretation or misuse of models — so mastering them is essential for becoming a strong ML engineer or data scientist.
+
+The Machine Learning Workflow:
+
+A machine learning project typically follows a structured, iterative workflow that ensures the model is both effective and reliable. Let’s break it down step by step.
+
+Step 1: Problem Statement
+
+Define what problem you’re trying to solve.
+
+Clearly specify the goal and type of prediction (classification, regression, clustering, etc.).
+
+Example:
+In image recognition, the goal might be to classify different breeds of dogs from images.
+
+Step 2: Data Collection
+
+Determine what data is needed to solve your problem.
+
+Gather sufficient and relevant data, often from multiple sources.
+
+Ensure data is labeled correctly, especially for supervised learning tasks.
+
+Example:
+To train a dog breed classifier, you’d need thousands of images labeled with the correct breed, in varied lighting and angles.
+
+Step 3: Data Exploration & Preprocessing
+
+This is often the most time-consuming step and includes:
+
+Exploring the data: understanding distributions, missing values, and relationships.
+
+Visualizing key aspects with plots, heatmaps, and correlation matrices.
+
+Cleaning the data by handling missing or inconsistent values.
+
+Transforming or scaling data for use in models.
+
+Example:
+In image processing, converting pixel values into multidimensional arrays (e.g., RGB channels) prepares the data for deep learning models.
+
+Step 4: Modeling
+
+Once the data is prepared, the next step is to build a model to solve the problem.
+
+Begin with a baseline model (like logistic regression or a simple neural network).
+
+Train the model on your training dataset.
+
+Experiment with different algorithms and hyperparameters.
+
+This step involves continuous iteration between model design and evaluation to improve performance.
+
+Step 5: Validation
+
+Test your model’s performance on a validation or holdout dataset (data the model hasn’t seen during training).
+
+Evaluate accuracy using appropriate metrics such as:
+
+Accuracy / F1 Score (for classification)
+
+Mean Squared Error (for regression)
+
+Confusion Matrix or ROC Curve (for classification analysis)
+
+Refine or retrain your model based on results.
+
+Example:
+In the dog breed classifier, you’d test your model on new dog images it hasn’t seen to ensure it generalizes well.
+
+Step 6: Decision-Making and Deployment
+
+Once a model performs well enough:
+
+Communicate findings and insights to stakeholders.
+
+Deploy the model into production (e.g., integrating it into an app or business workflow).
+
+Monitor and update the model over time as new data arrives or conditions change.
+
+Deployment transforms a trained model into a real-world solution that adds tangible value.
+
+Machine Learning Vocabulary:
+
+Let’s now cover a few essential terms that are foundational to any ML practitioner’s vocabulary.
+
+1. Target Variable:
+
+The value you’re trying to predict.
+
+Also called the dependent variable.
+
+Example: In predicting flower species, the species type is the target variable.
+
+2. Features (Explanatory Variables):
+
+The input variables used to predict the target.
+
+Also called independent variables.
+
+Example: In the Iris dataset, the features are sepal length, sepal width, petal length, and petal width.
+
+3. Example / Observation:
+
+A single row of your dataset — one instance of all feature values (and possibly a target value).
+
+Example: One flower entry in the Iris dataset.
+
+4. Label:
+
+The actual value of the target variable for one example.
+
+Example: “Versicolor” is a label in the Iris dataset for one observation.
+
+Example Summary – The Iris Dataset:
+
+Let’s tie these terms together:
+
+Feature Columns	Target (Label)
+Sepal Length, Sepal Width, Petal Length, Petal Width	Species (e.g., Versicolor)
+
+Each row represents an example/observation.
+
+The columns besides the target are features.
+
+The species column represents the target variable, and each entry (like “Versicolor”) is a label.
