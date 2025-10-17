@@ -1,0 +1,109 @@
+Lecture 6
+
+History of Machine Learning and Deep Learning
+
+Early Roots of Machine Learning (1940s–1950s):
+
+Machine Learning (ML) originated from early efforts to make machines learn from experience rather than follow fixed rules.
+The concept was inspired by both statistics and neuroscience, aiming to replicate how humans learn patterns.
+
+Key Foundations:
+
+Alan Turing (1950): Proposed that machines could learn from data, laying the groundwork for ML.
+
+Early Neural Networks (1943): Warren McCulloch and Walter Pitts developed a mathematical model of the neuron, one of the first computational representations of the human brain.
+
+Perceptron (1957): Frank Rosenblatt created the Perceptron, an early algorithm that could learn to classify simple patterns — a foundational step toward modern neural networks.
+
+However, due to limited computing power and data, these early models were extremely constrained in capability.
+
+The Symbolic Era (1950s–1970s):
+
+Before statistical learning dominated, AI and ML focused on symbolic reasoning — explicitly programming logical rules to represent human knowledge.
+
+While symbolic AI succeeded in small, well-defined problems, it struggled with uncertainty and complex real-world data.
+This led to a growing interest in data-driven learning methods that could automatically infer rules from examples.
+
+Statistical and Algorithmic Advancements (1980s–1990s):
+
+The 1980s and 1990s saw Machine Learning shift from symbolic systems to statistical models that could generalize from data.
+
+Key Developments:
+
+Decision Trees and SVMs: Algorithms like ID3 and Support Vector Machines provided strong predictive performance for structured data.
+
+Bayesian Methods: Brought probabilistic reasoning into ML, enabling models to handle uncertainty.
+
+Neural Networks Revival: The introduction of backpropagation (1986) by Rumelhart, Hinton, and Williams reignited interest in neural networks, allowing multi-layer learning for the first time.
+
+These innovations established the foundation of modern Machine Learning, focusing on empirical data and mathematical optimization rather than explicit programming.
+
+The Rise of Big Data and Computing Power (2000s):
+
+As computing hardware improved and data became more abundant, ML experienced a major resurgence.
+
+Enabling Factors:
+
+Vast amounts of digital data (internet, sensors, transactions).
+
+Affordable GPUs capable of parallel computation.
+
+New optimization methods and larger datasets improving model performance.
+
+Machine Learning began powering search engines, recommendation systems, speech recognition, and fraud detection.
+
+The Deep Learning Revolution (2010s–Present):
+
+Deep Learning emerged as a breakthrough that overcame the limitations of traditional ML by automatically learning hierarchical features from raw data.
+
+Milestones:
+
+2006: Geoffrey Hinton introduced “Deep Belief Networks,” reviving deep neural networks.
+
+2012: AlexNet (by Hinton’s team) won the ImageNet competition, drastically outperforming other models — marking the Deep Learning era.
+
+2014–2020s: Deep Learning expanded into natural language processing (e.g., transformers), speech recognition, self-driving cars, and generative models.
+
+Why Deep Learning Succeeded:
+
+Massive labeled datasets.
+
+Powerful GPUs and TPUs for training large models.
+
+Improved architectures (CNNs, RNNs, Transformers).
+
+Automatic feature learning, eliminating manual feature engineering.
+
+Machine Learning vs. Deep Learning – Evolution Summary:
+Aspect	Machine Learning (Classic)	Deep Learning (Modern)
+Feature Engineering	Manual (designed by humans)	Automatic (learned from data)
+Data Requirements	Works well on small datasets	Requires massive datasets
+Computation	Less resource-intensive	Requires GPUs/TPUs
+Interpretability	Easier to understand	Often a “black box”
+Performance	Good for structured/tabular data	Excellent for complex data (images, text, audio)
+Key Figures in ML and DL History:
+
+Alan Turing: Early ideas of machine intelligence.
+
+Frank Rosenblatt: Invented the Perceptron.
+
+Geoffrey Hinton: Father of Deep Learning; pioneered neural networks and backpropagation.
+
+Yann LeCun: Developed Convolutional Neural Networks (CNNs) for image recognition.
+
+Yoshua Bengio: Advanced deep architectures and generative models.
+
+Together, these pioneers shaped the evolution from simple learning machines to today’s deep neural networks capable of human-level perception in many tasks.
+
+The Modern Era and Beyond:
+
+Today, Machine Learning and Deep Learning power a wide range of technologies — from personalized recommendations to autonomous systems and generative AI tools.
+They have transformed industries such as healthcare, finance, transportation, and entertainment.
+
+Research now focuses on:
+
+Generalization and interpretability (understanding how models reason).
+
+Ethical AI (reducing bias and ensuring fairness).
+
+Efficient learning (training powerful models with less data and energy).
