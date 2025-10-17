@@ -1,0 +1,107 @@
+Lecture 9: Retrieving Data from CSV and JSON
+Learning Goals
+
+In this lecture, we’ll learn how to retrieve data from multiple data sources, including:
+
+CSV files
+
+JSON files
+
+SQL / NoSQL databases
+
+APIs and cloud-based data sources
+
+We’ll also discuss key practical considerations when working with these sources.
+
+ Reading CSV Files
+
+CSV stands for Comma-Separated Values.
+It consists of rows of data where each value is separated by a comma.
+
+In Pandas, reading CSV files is very easy and can be done with just a few lines of code:
+
+import pandas as pd
+
+file_path = 'data/iris_data.csv'
+data = pd.read_csv(file_path)
+print(data.iloc[:5])
+
+
+This will display the first five rows of the dataset — including columns like:
+
+Sepal Length
+
+Sepal Width
+
+Petal Length
+
+Petal Width
+
+Species
+
+Useful read_csv() Arguments
+
+Here are some handy arguments for pd.read_csv() you should know:
+
+Argument	Purpose	Example
+sep	Defines the separator (comma, tab, space, etc.)	sep='\t' for tab-separated values
+delim_whitespace	Treats any whitespace as a separator	delim_whitespace=True
+header	Specify which row to use as column names	header=1
+names	Manually set column names	names=['col1', 'col2', 'col3']
+na_values	Define values to treat as missing	na_values=['NA', 99]
+
+Tip:
+If your CSV file contains irregular formatting, these arguments help you cleanly import data without errors.
+
+Reading JSON Files
+
+JSON stands for JavaScript Object Notation —
+a common way to store and exchange data across systems, especially in:
+
+APIs
+
+Web applications
+
+NoSQL databases
+
+JSON data is structured as key-value pairs, much like Python dictionaries.
+
+Example JSON object:
+
+{
+  "sepal_length": 5.1,
+  "sepal_width": 3.5,
+  "petal_length": 1.4,
+  "petal_width": 0.2,
+  "species": "setosa"
+}
+
+Reading JSON with Pandas
+
+Use the read_json() function:
+
+data = pd.read_json('data/iris_data.json')
+
+
+If you encounter errors while reading JSON files, try using the orient parameter to specify structure type:
+
+'split'
+
+'records'
+
+'index'
+
+'columns'
+
+'values'
+
+Check the Pandas documentation if the structure doesn’t load properly.
+
+Writing JSON Files
+
+You can easily export data back into JSON using:
+
+data.to_json('output.json')
+
+
+This saves your DataFrame in JSON format — great for sharing with web apps or APIs.
