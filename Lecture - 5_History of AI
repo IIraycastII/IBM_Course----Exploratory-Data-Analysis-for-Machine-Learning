@@ -1,0 +1,105 @@
+Lecture 5
+
+History of AI
+
+Early Origins of Artificial Intelligence:
+
+The concept of Artificial Intelligence (AI) dates back to ancient times, when myths and stories described artificial beings endowed with human-like intelligence.
+However, AI as a formal field of study began in the mid-20th century, when scientists started exploring how machines could simulate human reasoning and learning.
+
+The Birth of AI (1940s–1950s):
+
+Alan Turing (1950): Proposed the idea that machines could “think” and introduced the Turing Test, a benchmark for determining whether a machine exhibits human-like intelligence.
+
+Early Computers: The invention of programmable digital computers provided a foundation for simulating intelligence.
+
+1956 Dartmouth Conference: Marked the official birth of AI as an academic field. The term “Artificial Intelligence” was coined by John McCarthy.
+
+Early Goals:
+Researchers aimed to create machines capable of reasoning, problem-solving, and learning — tasks associated with human intelligence.
+
+The Golden Years of AI (1956–1974):
+
+During this period, AI research gained tremendous optimism.
+Scientists believed that creating machines with human-level intelligence was just around the corner.
+
+Key Developments:
+
+Programs that could play games like checkers and chess.
+
+Logic-based systems that could solve algebraic problems.
+
+Early attempts at natural language processing and robotics.
+
+However, the technology of the time was limited — computers lacked the power and data needed to achieve the ambitious goals of researchers.
+
+The AI Winter (1974–1980):
+
+As progress slowed and expectations weren’t met, funding and interest declined.
+This period became known as the “AI Winter.”
+
+Causes:
+
+Limited computing power.
+
+Unrealistic promises of rapid progress.
+
+Difficulty in handling real-world complexity.
+
+Despite this slowdown, some research continued, laying groundwork for future breakthroughs.
+
+The Rise of Expert Systems (1980–1987):
+
+AI research revived with the development of Expert Systems — programs designed to emulate the decision-making abilities of human specialists.
+
+Example:
+
+MYCIN — an expert system developed at Stanford that diagnosed bacterial infections and recommended treatments.
+
+Impact:
+Expert systems proved that AI could have practical applications in business and medicine.
+However, their reliance on manually encoded rules made them difficult to scale and maintain.
+
+The Second AI Winter (Late 1980s–1990s):
+
+When expert systems became too costly and inflexible, enthusiasm waned again.
+AI funding was reduced for a second time.
+
+During this period, research continued quietly in machine learning, neural networks, and robotics, setting the stage for AI’s modern resurgence.
+
+The Modern AI Era (2000s–Present):
+
+The resurgence of AI came with advances in data availability, computing power, and algorithms — especially Deep Learning.
+
+Key Drivers of the Modern AI Boom:
+
+Big Data: Explosion of digital information from the internet, sensors, and devices.
+
+Powerful GPUs: Enabled large-scale training of deep neural networks.
+
+New Algorithms: Improved training techniques and model architectures.
+
+Breakthroughs:
+
+Image recognition (e.g., ImageNet, 2012).
+
+Speech recognition and virtual assistants (Siri, Alexa).
+
+Autonomous systems (self-driving cars, drones).
+
+Generative AI (ChatGPT, DALL·E, etc.).
+
+AI as the “New Electricity”:
+
+AI today is often compared to electricity — a general-purpose technology transforming every field it touches, from healthcare and education to transportation and entertainment.
+
+Like electricity in the 19th century, AI is revolutionizing industries and reshaping how humans interact with technology.
+
+Summary of AI Evolution:
+Era	Focus	Key Milestones
+1940s–1950s	Foundational ideas	Turing Test, Dartmouth Conference
+1956–1974	Early optimism	Logic-based AI, game-playing programs
+1974–1980	First AI Winter	Funding decline, limited hardware
+1980–1987	Expert Systems	Rule-based reasoning, MYCIN
+Late 1980s–1990s	Second AI Winter	Decline of expert systems, slow progress
+2000s–Present	Modern AI & Deep Learning	Big Data, Neural Networks, Generative AI
