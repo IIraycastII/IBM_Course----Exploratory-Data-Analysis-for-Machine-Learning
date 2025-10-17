@@ -1,0 +1,37 @@
+Lecture 1
+Introduction to Artificial Intelligence and Machine Learning
+
+Overview and Structure:
+1.	The video introduces the concepts of artificial intelligence (AI), machine learning (ML), and deep learning (DL)
+2.	It clarifies how DL is a subset of ML, which is itself a subset of AI.
+3.	This lecture highlights that deep learning has helped overcome many limitations of classical machine learning, constantly growing in a new era for AI
+
+Historical Development:
+1.	The lecture walks through the history of AI, including cycles of intense development followed by declines, eventually leading to today's rapid progress and boom in AI research and application.
+2.	The current trajectory of AI is compared to past advancements (such as electricity), emphasizing how today’s progress differs due to breakthroughs in DL and supporting technologies.
+
+Major Breakthroughs:
+1.	Two central AI breakthroughs:
+a.	Image Classification: Computers have surpassed human accuracy in recognizing objects (e.g., identifying cats vs. dogs from pictures).
+b.	Machine Translation: AI systems can translate sentences between languages to near-human performance, accounting for word order, phrasing, and common usage.
+
+2.	Challenges and Innovations:
+a.	The lecturer explains that classical ML struggled with complex data types like images (feature extraction was hard) and languages (not just word-level translation).
+b.	Recent advances in deep learning, as well as hardware and data storage, have enabled significant improvements in both image processing and natural language translation.
+
+3.	Industry Impact:
+a.	AI’s transformative effect spans multiple industries, such as:
+i.	Targeted digital advertising
+ii.	Targeted digital advertising
+iii.	Self-driving vehicles and smart transportation
+iv.	Smart homes with voice command entertainment and security
+
+4.	Definitions:
+a.	Artificial Intelligence (AI): Any program or system that senses, reasons, acts, and adapts, simulating human-like intelligent behavior.
+b.	Machine Learning (ML): A subset of AI; systems that improve their performance as more data is exposed to them.
+c.	Deep Learning (DL): A further subset of ML; uses multi-layered neural networks to tackle very complex data and tasks.
+
+
+
+
+
