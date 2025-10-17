@@ -1,0 +1,66 @@
+Lecture 4
+
+Machine Learning and Deep Learning – Part 2
+
+Challenges of Defining Features in Images:
+
+Unlike structured datasets, defining features in images is far more complex and highlights the limitations of traditional Machine Learning.
+
+In traditional ML, humans manually define features. But for images:
+
+Each pixel represents numerical data corresponding to its color value.
+
+Even a small image (e.g., 256 × 256 pixels) contains 65,000+ features — one per pixel.
+
+Treating each pixel independently ignores spatial relationships (e.g., how pixels together form a nose or an eye).
+
+This inability to capture relationships between neighboring pixels makes image recognition difficult for classical ML algorithms.
+
+How Deep Learning Addresses These Challenges:
+
+Deep Learning (DL) is a specialized subset of Machine Learning that uses deep neural networks to automatically learn features from data.
+
+Instead of humans manually defining features:
+
+Deep neural networks learn and combine pixel patterns to understand shapes and spatial structures.
+
+They can detect edges, curves, and complex features like eyes, noses, or entire faces.
+
+Thus, Deep Learning eliminates the need for explicit feature engineering and can handle complex problems such as image classification (e.g., cat vs. dog).
+
+What is Deep Learning?
+
+Deep Learning involves multi-layered neural networks capable of automatically extracting and combining features from raw input data.
+
+It is a subset of Machine Learning that focuses on large and complex datasets.
+
+Deep Learning models are highly powerful but also data-hungry and computationally intensive.
+
+Performance Comparison:
+
+With large, stable datasets, Deep Learning can outperform traditional ML by a wide margin.
+
+With small or frequently changing datasets, traditional ML often performs better and is easier to train.
+
+Classical Machine Learning vs. Deep Learning:
+Aspect	Classical Machine Learning	Deep Learning
+Feature Definition	Human experts manually define features before training.	Neural networks automatically learn features from data.
+Interpretability	Features are human-understandable.	Intermediate features are often abstract and hard to interpret.
+Data Requirement	Works well on small to medium datasets.	Requires large datasets for good performance.
+Computation	Less computationally intensive.	Requires high computational power (GPUs/TPUs).
+Adaptability	Performs better with changing or dynamic data.	Performs best with stable, high-volume data.
+Feature Learning Process in Deep Learning:
+
+Input: The neural network receives raw pixel values from the image.
+
+Hidden Layers:
+
+Early layers learn simple features like edges or colors.
+
+Middle layers combine these into shapes and textures.
+
+Deeper layers identify high-level objects like eyes, faces, or animals.
+
+Output: The network uses the learned patterns to classify or recognize the image.
+
+Though the intermediate features may not be directly interpretable, they are crucial for achieving high accuracy in tasks like image classification.
