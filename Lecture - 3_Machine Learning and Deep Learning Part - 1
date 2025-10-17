@@ -1,0 +1,51 @@
+Lecture 3
+Machine Learning and Deep Learning – Part 1
+
+What is Machine Learning?
+Machine Learning (ML) is the study and construction of programs that learn patterns from data rather than being explicitly programmed with fixed rules.
+ It is a subset of Artificial Intelligence (AI) focused on learning from experience (data) to make predictions or decisions.
+The more data an ML algorithm is exposed to, the better it can learn the underlying patterns—although performance eventually plateaus due to diminishing returns.
+
+How ML Algorithms Learn:
+ML systems learn from examples, not from explicit human instructions.
+ They improve performance through repeated exposure to data.
+Example – Email Spam Detection:
+•	Start with a labeled dataset (emails marked “spam” or “not spam”).
+•	The ML algorithm learns the distinguishing patterns.
+•	Once trained, it can classify new incoming emails as spam or not spam automatically.
+
+Features and Targets:
+•	Features: Measurable input variables used to make predictions.
+•	Target: The output or label that the algorithm tries to predict.
+Example – Iris Dataset:
+•	Features: Sepal length, sepal width, petal length, petal width.
+•	Target: Species (Setosa, Versicolor, or Virginica).
+ The model uses the four features to predict the species of the flower.
+
+Supervised vs. Unsupervised Learning:
+Supervised Learning:
+•	Data includes labeled outcomes (target values).
+•	Goal: Learn a mapping from features → target.
+•	Examples:
+o	Email spam classification
+o	Fraud detection
+o	Iris flower species prediction
+Unsupervised Learning:
+•	Data has no labels (no target column).
+•	Goal: Discover hidden structure or groupings in data.
+•	Example: Customer segmentation—grouping similar customers for marketing.
+In unsupervised learning, there is no single correct answer; results are evaluated based on how meaningful or useful the discovered patterns are.
+
+Example ML Tasks:
+Supervised Example – Fraud Detection:
+•	Dataset includes labeled transactions (“fraud” or “not fraud”).
+•	Features might include: transaction time, amount, location, and category.
+•	The model learns to predict whether a new transaction is fraudulent.
+Unsupervised Example – Customer Segmentation:
+•	Dataset has customer information without labels.
+•	The goal is to group customers into segments for targeted campaigns.
+
+Traditional Machine Learning Summary:
+Structured datasets with well-defined, intuitive features (like numbers or categories) are ideal for traditional ML methods.
+ For such data, algorithms like decision trees, logistic regression, or SVMs perform effectively in predicting outcomes or finding structures.
+
