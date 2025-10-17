@@ -1,0 +1,45 @@
+Lecture 2
+Machine Learning and Deep Learning
+
+
+Introduction to Machine Learning:
+1.	Machine Learning (ML) is the study and construction of programs that learn patterns from data over time, rather than being explicitly programmed with fixed rules.
+2.	ML is a subset of Artificial Intelligence focused on learning from data: the more data the algorithm receives, the better it learns underlying patterns.
+3.	There is a point where additional data provides diminishing returns—the algorithm’s performance plateaus.
+
+How ML Algorithms Work:
+1.	These algorithms learn by observing repeated examples and patterns in data, rather than by human-coded decision rules.
+2.	Example: Email spam detection trains on a labeled dataset of emails marked as “spam” or “not spam.” The algorithm learns patterns, then predicts on new, incoming emails.
+
+Features and Targets:
+1.	Features are the individual measurable properties (variables) in the dataset.
+2.	Target is the outcome/label the algorithm is trying to predict.
+3.	Example: The Iris dataset has four features (sepal length/width, petal length/width) and a target (species: virginica, setosa, versicolor).
+
+Supervised vs. Unsupervised Learning:
+1.	Supervised Learning uses labeled datasets; the algorithm learns from data that includes the target variable (e.g., predicting spam, fraud detection, classifying iris species).
+2.	Unsupervised Learning uses unlabeled datasets; the goal is to discover hidden structure or groupings (e.g., customer segmentation for marketing, clustering similar customers).
+
+Examples of ML Tasks:
+1.	Supervised: Fraud detection (predicting fraud vs. not fraud transactions based on features).
+2.	Unsupervised: Customer segmentation (grouping similar customers for targeted marketing).
+
+Feature Engineering Challenges:
+1.	In structured datasets (e.g., transaction logs), defining intuitive features is relatively straightforward.
+2.	For images, it’s challenging: each pixel is a feature, so even a modest image size leads to thousands of features. Spatial relationships (e.g., pixels making up a nose) are important but often lost if treating each pixel independently.
+
+Deep Learning and Its Advantages:
+1.	Deep Learning is a subset of Machine Learning that handles complex data (like images) using deep neural networks.
+2.	Deep Learning models can learn to extract and combine features (e.g., shapes, edges, faces) automatically, overcoming the limitations of classic ML, which relies on manual feature engineering.
+3.	Deep Learning shines with large datasets and advances in fields like image classification.
+
+Classic ML vs. Deep Learning:
+1.	Classic ML: Data scientists manually define features; performance can be good for smaller or changing datasets, but is limited for complex tasks.
+2.	Deep Learning: Automatically extracts and combines features via neural networks, usually excelling on large, stable datasets but potentially less effective for small or evolving data.
+3.	In classical ML, if the scientist guesses good features, the model performs well—but feature selection can be very challenging.
+
+
+Deep Learning Workflow:
+1.	The neural network takes raw pixel data and learns to extract meaningful features through complex layer combinations. Intermediate features (like edges or shapes) might not be easily interpretable but are crucial for tasks like image classification.
+
+ 
