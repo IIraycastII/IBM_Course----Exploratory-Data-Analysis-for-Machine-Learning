@@ -1,0 +1,125 @@
+Lecture 8
+
+Applications of Artificial Intelligence
+
+Introduction:
+
+Artificial Intelligence (AI) is no longer just a futuristic concept—it is a powerful force shaping our everyday experiences.
+From how we travel, communicate, shop, and interact online, AI quietly powers many of the systems we rely on daily.
+In this lecture, we’ll explore real-world applications of AI across personal life, business, and society.
+
+AI in Personal Transportation:
+1. Route Optimization:
+
+Finding the shortest and fastest path between two points has long been a computing challenge.
+Today, AI-powered systems like Google Maps and Waze take this further by integrating:
+
+Live traffic data
+
+Historical driving patterns
+
+Weather conditions
+
+Accidents and construction updates
+
+These systems continuously learn and adapt, providing real-time suggestions for the best possible route.
+
+2. Ride-Sharing Services:
+
+Platforms such as Uber and Lyft rely heavily on AI to:
+
+Dynamically adjust prices based on supply and demand (surge pricing).
+
+Match riders with nearby drivers efficiently.
+
+Predict areas of high future demand using real-time data.
+
+This allows for optimal pricing and improved user experience, reducing waiting time and maximizing driver earnings.
+
+AI in Social Media and Online Platforms:
+1. Personalized Content and Recommendations:
+
+Social media platforms like Facebook, Instagram, and X (Twitter) use AI to:
+
+Analyze user activity and preferences.
+
+Suggest friends, groups, or pages to connect with.
+
+Deliver targeted advertisements that match user interests.
+
+Curate news feeds so users see what they’re most likely to engage with.
+
+2. Image Recognition and Sentiment Analysis:
+
+AI detects inappropriate or harmful content before it spreads.
+
+Sentiment analysis classifies posts, comments, or reviews as positive, neutral, or negative.
+Example: Detecting whether a restaurant review expresses satisfaction or disappointment.
+
+This technology helps maintain safe, engaging, and relevant digital environments.
+
+AI in Natural Language Processing (NLP):
+Voice Assistants:
+
+Products like Apple’s Siri, Amazon’s Alexa, and Google Assistant use NLP to:
+
+Understand voice commands.
+
+Answer questions and perform tasks (like playing music or controlling lights).
+
+Learn from user behavior to improve accuracy over time.
+
+These systems have made human-computer interaction conversational and intuitive.
+
+AI in Computer Vision:
+1. Facial Recognition:
+
+Platforms such as Facebook automatically recognize people in photos.
+
+This makes tagging, sharing, and organizing images effortless.
+
+2. Object Detection:
+
+A cornerstone of autonomous vehicles, object detection helps systems:
+
+Recognize pedestrians, vehicles, and obstacles in real time.
+
+Make split-second driving decisions safely.
+
+3. Advanced Applications:
+
+AI-driven real-time detection systems are now being developed for:
+
+Abandoned baggage detection in airports.
+
+Crowd monitoring for safety and security.
+
+Smart surveillance to identify unusual or dangerous activity.
+
+These advancements rely on deep learning models trained to identify objects and anomalies from live video feeds.
+
+AI in Daily Life – Beyond the Obvious:
+
+AI subtly enhances many aspects of modern living:
+
+Email filtering: Spam detection and priority sorting.
+
+E-commerce: Personalized product recommendations.
+
+Banking: Fraud detection and customer support automation.
+
+Streaming services: Netflix, Spotify, and YouTube using recommendation engines to match user taste.
+
+Each of these examples relies on continuous machine learning, where systems improve as they gather more data.
+
+Key Technologies Behind These Applications:
+
+Machine Learning (ML): Enables systems to learn patterns from data.
+
+Deep Learning: Powers complex tasks like image and speech recognition.
+
+Natural Language Processing (NLP): Enables understanding and generation of human language.
+
+Computer Vision: Allows machines to interpret visual information.
+
+Reinforcement Learning: Helps systems learn optimal actions through trial and error.
