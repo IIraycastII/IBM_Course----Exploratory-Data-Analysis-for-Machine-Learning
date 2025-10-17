@@ -1,0 +1,100 @@
+Lecture 10
+Retrieving Data from Databases, APIs, and the Cloud
+Learning Goals
+
+In this lecture, we’ll explore how to retrieve data from different structured and unstructured sources, including:
+
+SQL databases (relational)
+
+NoSQL databases (non-relational)
+
+APIs
+
+Cloud data sources
+
+We’ll also discuss common issues and best practices when connecting to these data sources.
+
+Retrieving Data from SQL Databases
+
+SQL (Structured Query Language) databases are relational databases with a fixed schema.
+
+Examples:
+
+Microsoft SQL Server
+
+PostgreSQL
+
+MySQL
+
+AWS Redshift
+
+Oracle DB
+
+IBM Db2
+
+Popular Python libraries for SQL:
+
+sqlite3 (for SQLite)
+
+SQLAlchemy (works with multiple SQL databases)
+
+psycopg2 (PostgreSQL)
+
+ibm_db (Db2)
+
+Example: Reading from SQLite with Pandas
+
+import sqlite3
+import pandas as pd
+
+path = 'data/classic_rock.db'
+con = sqlite3.connect(path)
+
+query = "SELECT * FROM rock_songs"
+df = pd.read_sql(query, con)
+
+Retrieving Data from NoSQL Databases
+
+NoSQL databases are non-relational and often store data in JSON format.
+
+Types of NoSQL databases:
+
+Document databases: Each document represents an observation (e.g., MongoDB)
+
+Graph databases: Maintain relationships between entities (e.g., LinkedIn connections)
+
+Wide-column families: Group columns logically for a person’s personal vs professional details
+
+Example: Reading from MongoDB
+
+from pymongo import MongoClient
+import pandas as pd
+
+con = MongoClient("your_mongo_db_url")  # Include username/password if needed
+db = con.database_name  # Specify database
+
+cursor = db.collection_name.find({})  # Query: select all
+data_list = list(cursor)  # Convert to list of dictionaries
+df = pd.DataFrame(data_list)  # Load into Pandas DataFrame
+
+Retrieving Data from APIs and the Cloud
+
+Many platforms provide data via APIs (Application Programming Interfaces).
+
+Examples:
+
+Twitter API for tweets
+
+Amazon marketing data
+
+Public datasets (e.g., UC Irvine Machine Learning Repository)
+
+Example: Reading CSV from a URL
+
+import pandas as pd
+
+data_url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+df = pd.read_csv(data_url)
+
+
+This allows direct access from the web without downloading files manually.
