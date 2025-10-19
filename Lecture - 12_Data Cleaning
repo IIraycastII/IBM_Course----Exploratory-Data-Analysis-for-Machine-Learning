@@ -1,0 +1,90 @@
+Lecture 12
+Data Cleaning
+
+Learning Goals
+
+In this lecture, we’ll explore why data cleaning is essential for machine learning and analytics. We’ll cover:
+
+The importance of data cleaning ("garbage in, garbage out")
+
+Common problems caused by messy data
+
+Identifying and handling duplicates and unnecessary data
+
+Dealing with outliers — pros, cons, and policies
+
+Understanding how data quality affects model reliability
+
+Why Data Cleaning Matters
+
+Data cleaning ensures that our models and decisions are based on accurate, reliable information. Since analytics and machine learning workflows depend on high-quality data, unclean data can distort relationships between features and targets, leading to misleading models and poor predictions.
+
+If data is mislabeled, incomplete, or inaccurate, models will misrepresent real-world relationships. For example, mislabeled images in a dataset like ImageNet can cause models to learn the wrong patterns.
+
+Key components affected by messy data:
+
+Observations: Each row must represent accurate information.
+
+Labels: Must be correctly assigned to maintain prediction accuracy.
+
+Features: Should accurately describe the underlying phenomenon (e.g., transaction amounts, locations).
+
+Models: Assume data reflects real-world patterns; messy data breaks this assumption.
+
+Bottom line: messy data = unreliable models. Always clean before modeling.
+
+Common Data Problems
+
+Lack of Data
+
+Too little relevant data prevents effective modeling.
+
+Companies may need to collect more data or buy third-party data.
+
+Too Much Data
+
+Data spread across multiple systems (on-premises, cloud, databases) becomes hard to manage.
+
+Requires strong data engineering to make it usable for ML.
+
+Bad Data Quality
+
+Even with ample data, poor quality leads to the “garbage-in, garbage-out” problem.
+
+60% of organizations struggle with managing data quality.
+
+Clean, consistent, and accessible data is the foundation for AI readiness.
+
+How Data Can Be Messy
+
+Duplicates: Repeated records can distort model weights.
+
+Example: multiple copies of the same fraud transaction exaggerate its influence.
+
+Inconsistent Text / Typos:
+
+Variations in capitalization, spacing, or spelling create false categories.
+
+Missing Data:
+
+Some level is unavoidable, but too much in key features can weaken predictions.
+
+Outliers:
+
+Extreme values can skew results and mask true relationships.
+
+Data Sourcing Issues:
+
+Combining data from different systems or formats (cloud vs on-prem) can cause mismatches and inconsistencies.
+
+Handling Duplicates
+
+Check necessity:
+
+Some duplicates may be real (e.g., two identical flowers in the Iris dataset).
+
+Others (like duplicate images) should be removed.
+
+Inspect carefully:
+
+Filter data to examine duplicates, but keep access to raw data for future checks.
