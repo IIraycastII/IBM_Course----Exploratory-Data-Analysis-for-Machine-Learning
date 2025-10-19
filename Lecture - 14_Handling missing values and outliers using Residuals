@@ -1,0 +1,107 @@
+Lecture 14
+Handling Missing Values and Outliers Using Residuals
+
+Learning Goals
+
+In this lecture, we’ll build on our understanding of outliers by introducing residuals — a key tool for detecting and understanding model errors. We’ll cover:
+
+What residuals are and how they indicate model performance
+
+Different types of residuals (standardized, deleted, and studentized)
+
+Methods to handle outliers once detected
+
+A recap of data cleaning and its importance in the machine learning workflow
+
+What Are Residuals?
+
+A residual is the difference between the actual value and the predicted value produced by your model:
+
+Residual
+=
+Actual Value
+−
+Predicted Value
+Residual=Actual Value−Predicted Value
+
+Residuals represent model failure — how far off your predictions are from reality. Large residuals often indicate outliers or data points the model struggles to explain.
+
+Approaches to Detect Outliers Using Residuals
+1. Standardized Residuals
+
+Calculated by dividing each residual by the standard error of the residuals.
+
+This adjusts for scale — being off by “4” means very different things if your target values range between 0–5 versus 10M–100M.
+
+Helps identify extreme deviations relative to expected variability.
+
+Standardized Residual
+=
+Residual
+Standard Error
+Standardized Residual=
+Standard Error
+Residual
+	​
+
+2. Deleted Residuals
+
+For each observation:
+
+Remove it from the dataset.
+
+Refit the model without that point.
+
+Compare the new prediction to the original model’s prediction.
+
+If the model’s behavior changes significantly, that observation likely has high influence and may be an outlier.
+
+This method helps evaluate how much each data point affects the overall model.
+
+3. Studentized Residuals (Externally Studentized)
+
+Combines the two methods above:
+
+Removes one observation (like deleted residuals).
+
+Then standardizes the residual to account for variability (like standardized residuals).
+
+Provides a precise measure of how unusual each data point is, considering both influence and scale.
+
+Handling Outliers Once Detected
+
+After identifying outliers, you can choose how to handle them depending on context and data importance.
+
+1. Remove the Outlier
+
+Pros: Eliminates the issue entirely.
+
+Cons: May lose valuable or meaningful information if the outlier reflects a real-world event.
+
+2. Assign a New Value
+
+Replace the outlier with an estimated or capped value.
+
+Pros: Keeps the rest of the row intact.
+
+Cons: Removes potentially informative variation.
+
+3. Transform the Feature
+
+Apply mathematical transformations (e.g., log, square root) to reduce skewness.
+
+After transformation, extreme values may no longer appear as outliers.
+
+4. Predict the Outlier Value
+
+Estimate the likely true value using other features or regression models.
+
+Pros: Leverages existing data relationships.
+
+Cons: Requires extra computation and assumptions about data patterns.
+
+5. Keep the Outlier
+
+Sometimes, the outlier provides crucial information about rare or significant behavior.
+
+In such cases, use robust models that are resistant to outliers (e.g., tree-based models, median-based regressions).
