@@ -1,0 +1,55 @@
+Lecture 15
+Introduction to Exploratory Data Analysis
+
+Learning Goals
+In this lecture, we’ll explore the process of understanding and summarizing datasets before modeling. We’ll cover:
+
+What Exploratory Data Analysis (EDA) is and why it’s essential
+
+Statistical and visual techniques used in EDA
+
+Using sampling to efficiently explore large datasets
+
+Practical libraries for performing EDA in Python
+
+What Is Exploratory Data Analysis?
+EDA is the initial step of analyzing data to summarize its main characteristics using both statistical summaries and visual methods. It serves as your “first conversation” with the data, helping determine if the dataset makes sense, needs cleaning, or requires additional data.
+
+EDA helps identify patterns, trends, and relationships that often guide model design and hypothesis formulation. Sometimes, insights gained here can be as valuable as the modeling results themselves.
+
+Common Statistical Techniques
+EDA often begins with computing summary statistics such as:
+
+Mean, median, minimum, and maximum values
+
+Correlations between variables
+
+Mode to identify the most common values
+
+These statistics provide early clues about central tendencies, data spread, and relationships in the dataset.
+
+Visualization Techniques
+Visual tools provide a deeper and more intuitive understanding of data relationships. Common visual techniques include:
+
+Histograms to understand variable distributions
+
+Scatter plots to study relationships between pairs of variables
+
+Box plots to detect data spread and identify outliers
+
+For Python-based visualizations, libraries like Matplotlib and Seaborn are commonly used, while Pandas assists with data manipulation and summary statistics.
+
+Practical Example
+Consider a dataset of job applicants. EDA could involve analyzing the average interview scores by job function or city, identifying the most frequent keywords in resumes, and comparing correlations between technical skill scores and years of experience. These insights help understand the candidate pool before any modeling.
+
+Sampling in EDA
+For large datasets, sampling is used to explore or model smaller, representative subsets of data efficiently.
+
+Random sampling selects rows randomly to reduce computation time.
+
+Stratified sampling ensures subgroups (e.g., diseased vs. healthy in medical data) are proportionally represented in the sample.
+
+In Python, the DataFrame.sample() method allows you to take random samples from a dataset. For example, setting n=5 returns five random rows, and replace=False ensures no row appears more than once. You can also select specific columns to inspect subsets of data.
+
+Why EDA Matters
+EDA validates data quality, reveals hidden structures, and uncovers valuable insights before any modeling begins. It enables better decision-making on cleaning, transformation, and feature engineering — ultimately improving model performance and interpretability.
