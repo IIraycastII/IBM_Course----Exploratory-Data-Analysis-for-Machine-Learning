@@ -1,0 +1,68 @@
+Lecture 16
+EDA with Visualization
+
+Learning Goals
+In this lecture, we’ll focus on powerful libraries and methods for creating visualizations to support exploratory data analysis (EDA) in Python. We’ll cover:
+
+Key data visualization libraries: Matplotlib, Pandas, and Seaborn
+
+How to build basic and complex plots with these libraries
+
+Customizing plots for deeper insight
+
+Practical strategies for comparing and analyzing data visually
+
+Core Python Visualization Libraries
+Matplotlib
+The foundation for all plotting and graphing in Python, offering extensive control and flexibility.
+
+Pandas
+Built-in plotting via Pandas provides a convenient wrapper around Matplotlib — fast to use though less customizable.
+
+Seaborn
+Adds visually appealing and statistically advanced plots, with shorthand functions for analyses like linear models and pairwise correlations.
+
+When Seaborn is imported, its style settings apply to Matplotlib plots, creating a unified look for your visualizations.
+
+Plotting Approaches and Examples
+1. Basic Scatter Plots with Matplotlib
+Import as matplotlib.pyplot (alias plt)
+
+To display plots in Jupyter notebooks, use %matplotlib inline
+
+Example: Plot sepal length vs. sepal width with customizable markers ('o' for dots, '^' for triangles, etc.)
+
+2. Layered Scatter Plots
+Call plt.plot repeatedly to overlay multiple datasets (e.g., sepal and petal measurements)
+
+Add labels and legends to distinguish plot features
+
+3. Histograms
+Visualize the distribution of a single variable by setting the number of bins
+
+4. Object-Oriented Plotting
+Use fig, ax = plt.subplots() for more customizable, modular plots
+
+Apply ax methods for labeling, ticks, and adding titles
+
+5. Bar Plots and Custom Labels
+Create horizontal bar plots, set custom tick marks and labels for clarity
+
+6. Pandas Plotting
+Easy one-liner plots from DataFrames:
+Data grouped by a variable (e.g., species), plotted with color, line styles, and figure size options
+
+Default plot is a line graph; further customization possible with colors and labels
+
+7. Seaborn Advanced Visualizations
+Use sns.pairplot() for pairwise feature comparisons with grouping via the hue parameter
+
+Automatically generates scatter plots and histograms for all variable pairs
+
+Perfect for examining relationships and distributions across categories (e.g., species in the Iris dataset)
+
+8. Hexbin and Joint Plots
+sns.jointplot() visualizes the density of values between two variables using hexbin or scatter; overlays histograms
+
+9. Facet Grids
+Use sns.FacetGrid() to break plots out by categories (e.g., species) — map histograms or other plots across rows/columns
