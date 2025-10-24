@@ -1,0 +1,67 @@
+Lecture 17
+Grouping Data for EDA
+
+Learning Goals
+In this lecture, we’ll learn how grouping and aggregating data strengthens exploratory data analysis (EDA) and reveals critical patterns across categories. We’ll cover:
+
+Using Pandas to group data by categorical variables
+
+Aggregating summary statistics for different groups
+
+Comparing features across groups through visualization
+
+Integrating advanced Seaborn plots for in-depth analysis
+
+Grouping and Aggregation with Pandas
+To understand how features behave across categories, we use the Pandas groupby function. For example, in the Iris dataset, we can group by the species column and calculate the mean for features such as:
+
+Petal length
+
+Petal width
+
+Sepal length
+
+Sepal width
+
+After grouping and calculating the mean, we use .plot (defaulting to a line graph), customize line styles, colors, labels, font size, and figure dimensions for clarity. For instance:
+
+Assign colors: red, blue, black, green for each feature
+
+Set axis labels and graph size
+
+The resulting plot enables quick comparison of average feature values across different species or categories.
+
+Pairwise Relationships with Seaborn
+Seaborn’s pairplot function visualizes all pairwise relationships among features, colored by category using the hue parameter (e.g., species).
+
+sns.pairplot(data, hue="species")
+
+Each off-diagonal scatter plot presents feature relationships
+
+Diagonal plots show feature distributions as histograms
+
+Facilitates discovering correlations, trends, or grouping in the dataset
+
+This technique easily translates to business cases, such as comparing campaign ad spend against revenue by region or time.
+
+Density and Overlap: Joint and Hexbin Plots
+Seaborn’s jointplot displays two-dimensional density:
+
+Enhances scatter plots by showing where most points cluster
+
+Hexagons shade more densely packed data regions
+
+Marginal histograms illustrate the distribution of each variable
+
+Facet Grids for Multi-Category Analysis
+Seaborn’s FacetGrid breaks down visualizations by grouping variable:
+
+Specify column (or row) for splitting by categories, like species
+
+g = sns.FacetGrid(data, col="species", margin_titles=True)
+
+Map desired functions (e.g., histogram) onto each split
+
+Enables side-by-side comparison of feature distributions per group
+
+For example, plot separate histograms for sepal width or sepal length for each species to identify differences.
