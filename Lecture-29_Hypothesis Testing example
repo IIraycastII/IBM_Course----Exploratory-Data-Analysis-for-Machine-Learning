@@ -1,0 +1,74 @@
+Lecture-29
+Hypothesis Testing example
+
+Concept Overview:
+This example demonstrates how hypothesis testing works using a coin-tossing scenario. The goal is to determine which coin is more likely to have been chosen, based on observed data — in this case, the number of heads in 10 tosses.
+
+Setup:
+
+Coin 1: Probability of heads = 0.7
+
+Coin 2: Probability of heads = 0.5
+
+One of these coins is chosen at random (unknown) and tossed 10 times.
+
+Based on the number of heads observed, we decide which coin is more likely.
+
+Hypotheses:
+
+Null Hypothesis (H₀): The coin is fair (50/50).
+
+Alternative Hypothesis (H₁): The coin is biased toward heads (70/30).
+
+Process:
+
+Compute Probabilities:
+Using the Binomial distribution, calculate the probability of observing each possible number of heads (0–10) for both coins:
+
+𝑃(𝑋=𝑘)=(10𝑘)𝑝𝑘(1−𝑝)10−𝑘
+P(X=k)=(k10)pk(1−p)10−k
+
+where 
+𝑝
+p = probability of heads for each coin.
+
+Interpret the Pattern:
+
+Lower numbers of heads (e.g., 2–4) are more likely under the fair coin (0.5).
+
+Higher numbers of heads (e.g., 7–10) are more likely under the biased coin (0.7).
+
+Example:
+Suppose we observe 3 heads out of 10 tosses:
+
+𝑃(3 heads∣0.5)=0.117
+P(3 heads∣0.5)=0.117
+
+𝑃(3heads∣0.7)=0.009
+P(3 heads∣0.7)=0.009
+
+The likelihood ratio = 0.117/0.009=13
+0.117/0.009=13
+
+⇒ The result (3 heads) is 13 times more likely if the coin were fair than if it were biased.
+
+Key Concept — Likelihood Ratio:
+
+The likelihood ratio quantifies how much more likely one hypothesis is compared to the other, given the observed data.
+
+Likelihood Ratio=𝑃(data∣𝐻0)𝑃(data∣𝐻1)
+Likelihood Ratio=P(data∣H1)P(data∣H0)
+	​
+
+
+A higher ratio supports the null hypothesis (H₀); a lower ratio supports the alternative hypothesis (H₁).
+
+Takeaway:
+
+This simple coin example illustrates the core logic of hypothesis testing:
+
+We compare how probable our observed data is under two competing hypotheses.
+
+The more likely explanation (based on computed probabilities) guides our decision.
+
+This reasoning forms the basis for all hypothesis tests — whether about coins, customer arrivals, or machine performance.
