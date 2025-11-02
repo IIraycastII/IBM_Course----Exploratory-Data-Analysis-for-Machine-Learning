@@ -1,0 +1,78 @@
+Lecture 18
+Feature Engineering and Variable Transformation
+
+Learning Goals
+
+In this lecture, we’ll learn how to prepare and optimize raw data before building machine learning models. We’ll cover:
+
+Understanding feature engineering and variable transformation
+
+Applying feature encoding to convert categorical data into numerical form
+
+Using feature scaling to align data ranges across features
+
+Exploring how transformations improve model assumptions and performance
+
+Feature Engineering Overview
+
+Before modeling, we often need to refine raw data to improve model performance. Feature engineering involves modifying, creating, or encoding variables to help algorithms learn patterns effectively.
+
+Common steps include:
+
+Handling categorical data through encoding methods (e.g., one-hot or label encoding)
+
+Applying log transformations to manage skewed data and outliers
+
+Ensuring data aligns with model assumptions (like linearity for linear regression)
+
+Variable Transformation
+
+Variable transformations modify the scale or distribution of data features to make them more suitable for modeling.
+
+Log transformation can normalize data and reduce the influence of extreme values.
+
+Transformations can also ensure linear relationships between predictors and targets—crucial for linear models.
+
+Example: If x1 = cast budget and x2 = marketing budget, transforming them can help establish a linear relationship with the target variable y (movie revenue).
+
+Feature Encoding
+
+Machine learning models require numerical inputs. Categorical data (e.g., “male”, “female”) must be converted into numbers.
+
+Label encoding: assigns unique integers to each category
+
+One-hot encoding: creates separate binary columns for each category
+
+These encodings make categorical data usable in models while retaining interpretability.
+
+Feature Scaling
+
+Real-world datasets contain features with varying scales (e.g., income in thousands, age in years). Many algorithms assume features are on similar scales.
+Common scaling techniques include:
+
+Standardization (Z-score scaling) — centers data around the mean with unit variance
+
+Normalization (Min-Max scaling) — rescales data to a fixed range, usually [0, 1]
+
+Proper scaling improves convergence speed and model accuracy.
+
+Connecting to Linear Models
+
+Linear regression assumes a linear relationship between predictors (x1, x2, …) and the target (y).
+The basic form is:
+y = β₀ + β₁x₁ + β₂x₂
+Here, β₀, β₁, and β₂ are model parameters learned during training.
+
+Transforming features ensures that this linear assumption holds true, improving the reliability of linear and derived models.
+
+Example
+
+For predicting box office returns:
+
+x1 = cast budget
+
+x2 = marketing budget
+
+y = revenue
+
+Transforming and scaling these variables can help the model better estimate how each factor influences revenue.
