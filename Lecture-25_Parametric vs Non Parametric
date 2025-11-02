@@ -1,0 +1,152 @@
+Lecture 25: 
+Parametric vs. Non-Parametric Models
+
+Learning Goals
+
+In this lecture, we’ll explore two major branches of statistical modeling — Parametric and Non-Parametric approaches.
+By the end of this lecture, you’ll understand:
+
+What differentiates parametric from non-parametric models
+
+How assumptions and parameters shape model flexibility
+
+How maximum likelihood estimation (MLE) works in parametric models
+
+The most common probability distributions used in data analysis
+
+How these concepts connect to real-world business problems such as customer lifetime value and churn prediction
+
+Statistical Modeling and Inference
+
+In statistical inference, our goal is to identify the underlying data-generating process — that is, the mechanism that produces our observed data.
+
+A statistical model represents a family of possible distributions or regressions that could describe this process.
+
+Parametric Models
+
+Definition:
+A parametric model assumes that the data follow a specific probability distribution (e.g., normal, exponential) that can be fully described by a finite number of parameters.
+
+Key Characteristics:
+
+Based on strong assumptions about data distribution
+
+Requires a fixed set of parameters (e.g., mean and standard deviation)
+
+Simpler and faster to compute
+
+Examples: Linear regression, logistic regression, normal distribution models
+
+Example:
+Ordinary Least Squares (OLS) linear regression is parametric because:
+
+It assumes a linear relationship between features and outcomes.
+
+It estimates a finite number of coefficients.
+
+Non-Parametric Models
+
+Definition:
+A non-parametric model makes fewer assumptions about the underlying data distribution.
+It’s often called distribution-free inference.
+
+Key Characteristics:
+
+Does not assume a specific distribution form
+
+Relies heavily on the data itself to infer relationships
+
+More flexible, but typically needs larger datasets
+
+Examples: Histograms, Kernel Density Estimation (KDE), Decision Trees, K-Nearest Neighbors
+
+Example:
+Building a histogram to estimate the data’s distribution is a non-parametric approach.
+It visualizes the empirical probability of different value ranges without assuming normality or any predefined shape.
+
+Connecting to Business Context — Customer Lifetime Value (CLV)
+
+Customer Lifetime Value (CLV) measures how much revenue a customer is expected to generate during their relationship with the company.
+
+To estimate CLV, we might:
+
+Model how long the customer stays (tenure)
+
+Estimate how much they spend over time
+
+Parametric Approach:
+Assume a specific functional form, like a linear or exponential decay over time.
+This involves fewer parameters but relies on strong assumptions.
+
+Non-Parametric Approach:
+Let the data define the pattern — using actual customer histories to estimate CLV distributions.
+This approach needs more data but is more flexible and realistic when assumptions don’t hold.
+
+Maximum Likelihood Estimation (MLE)
+
+In parametric modeling, parameters are often estimated using Maximum Likelihood Estimation.
+
+Idea:
+Find parameter values that make the observed data most probable under the assumed model.
+
+Example with the Normal Distribution:
+
+Parameters: Mean (μ) and Standard Deviation (σ)
+
+The MLE finds the values of μ and σ that maximize the likelihood function, meaning they make the observed data most likely.
+
+In essence:
+
+MLE chooses parameter values that best explain the data we observed.
+
+Common Statistical Distributions
+
+Let’s explore several foundational distributions used in statistics and machine learning:
+
+1. Uniform Distribution
+
+Every outcome has equal probability.
+
+Example: Rolling a fair six-sided die (each face 1–6 equally likely).
+
+2. Normal (Gaussian) Distribution
+
+Defined by mean (μ) and standard deviation (σ).
+
+Data clusters around the mean, with symmetry on both sides.
+
+Lower σ → tighter, sharper peak; higher σ → wider, flatter curve.
+
+Common in natural phenomena like height, weight, and measurement errors.
+
+Central Limit Theorem (CLT):
+
+The average of many independent random samples approaches a normal distribution, regardless of the underlying population distribution.
+
+This makes the normal distribution ubiquitous in real-world data.
+
+3. Log-Normal Distribution
+
+If a variable’s logarithm is normally distributed, the variable itself follows a log-normal distribution.
+
+Useful for skewed data, especially in finance or income analysis.
+
+Example: Household income — most people earn near the average, but a few very high earners stretch the distribution’s right tail.
+
+4. Exponential Distribution
+
+Models the time between events in a Poisson process.
+
+Example: Time until the next customer arrives or the next website visit.
+
+Characterized by rapid decline — most events occur early, few occur after long intervals.
+
+5. Poisson Distribution
+
+Models the count of events occurring in a fixed time or space interval.
+
+Parameter λ (lambda) represents both the mean and variance.
+
+Example: Number of website visitors per minute, or calls received per hour.
+
+As λ increases, the distribution becomes more symmetric (approaching normal).
