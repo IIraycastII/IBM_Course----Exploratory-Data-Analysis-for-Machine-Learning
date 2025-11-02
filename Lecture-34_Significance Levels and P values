@@ -1,0 +1,94 @@
+Lecture-34
+Significance Levels and P values
+
+1. The Big Picture
+
+Hypothesis testing helps us decide whether the data provides enough evidence to reject a “no effect” or “status quo” claim (the null hypothesis, H₀).
+To make that decision, we calculate:
+
+A test statistic — derived from our sample data
+
+A P-value — how extreme that statistic is if H₀ were true
+
+A significance level (α) — our predefined cutoff for what counts as “too extreme”
+
+2. Significance Level (α)
+
+Definition: The significance level represents the threshold for rejecting the null hypothesis.
+It is the probability of making a Type I error, meaning rejecting H₀ when it is actually true.
+
+Common values:
+
+α = 0.10 → more tolerant of false positives
+
+α = 0.05 → standard level used in most studies
+
+α = 0.01 or 0.001 → very strict, used in critical applications such as medicine
+
+Interpretation:
+If α = 0.05, we are willing to accept a 5% chance of incorrectly concluding that there is an effect when there actually isn’t.
+
+3. P-Value (Probability Value)
+
+Definition:
+The P-value is the probability of obtaining a test statistic as extreme or more extreme than what was observed, assuming the null hypothesis is true.
+
+Mathematically:
+
+𝑃=𝑃(data as or more extreme than observed∣𝐻0 true)
+P=P(data as or more extreme than observed∣H0 true)
+
+Interpretation:
+
+Small P → data is unlikely under H₀ → reject H₀
+
+Large P → data is plausible under H₀ → fail to reject H₀
+
+Decision rule:
+
+If P ≤ α, reject the null hypothesis.
+
+If P > α, fail to reject the null hypothesis.
+
+4. Coin Toss Example
+
+Setup:
+
+Null hypothesis (H₀): The coin is fair → P(Heads) = 0.5
+
+Alternative (H₁): The coin is biased toward tails → P(Heads) < 0.5
+
+Observed: 3 heads in 10 flips
+
+Step 1: Choose significance level
+α = 0.05
+
+Step 2: Compute the P-value
+Under H₀ (a fair coin), the number of heads follows a binomial distribution:
+
+𝑋∼Binomial(𝑛=10,𝑝=0.5)
+X∼Binomial(n=10,p=0.5)
+
+We calculate:
+
+𝑃(𝑋≤3)=0.171
+P(X≤3)=0.171
+
+This means there is a 17.1% chance of observing 3 or fewer heads in 10 flips if the coin is fair.
+
+Step 3: Compare with α
+Since 0.171 > 0.05, we fail to reject H₀.
+The data is not extreme enough to conclude that the coin is unfair.
+
+5. Business Applications
+Scenario	Null Hypothesis (H₀)	Alternative (H₁)	Appropriate α	Reasoning
+Marketing Campaign	The campaign has no effect on sales	The campaign increases sales	0.10	Less harm in a false positive
+Medical Drug Test	The drug has no effect	The drug helps recovery	0.001	Critical to avoid false positives
+Website Layout A/B Test	The layout change has no impact	The layout change affects traffic	0.05	Balanced approach
+6. Relationship Between Significance Level, Power, and Sample Size
+
+Lower α reduces the chance of a Type I error but increases the chance of a Type II error (failing to detect a real effect).
+
+Larger sample sizes increase the power of the test, meaning a higher probability of correctly rejecting a false null hypothesis.
+
+Choosing α should balance the seriousness of errors and the practical context of the decision.
