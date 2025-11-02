@@ -1,0 +1,101 @@
+Lecture 21
+Feature Scaling
+
+Learning Goals
+
+In this lecture, we’ll learn how to adjust the scale of continuous variables so that they can be compared meaningfully and treated fairly by machine learning algorithms. We’ll cover:
+
+Why scaling is necessary for features with different magnitudes
+
+How unscaled data can distort distance-based algorithms like K-Nearest Neighbors (KNN)
+
+The three main scaling techniques: Standard Scaling, Min-Max Scaling, and Robust Scaling
+
+When and why to use each scaling method
+
+Why Feature Scaling Matters
+
+In real-world datasets, different features often exist on different scales.
+For example:
+
+Product price: ranges between 0–10
+
+Number of stores: ranges between 10,000–50,000
+
+Without scaling, features with larger numerical ranges dominate others, leading models to assign disproportionate importance to them.
+
+Example: K-Nearest Neighbors (KNN)
+
+KNN determines a point’s label based on its nearest neighbors in feature space.
+
+Imagine two features:
+
+Age (measured in seconds)
+
+Number of surgeries
+
+If age is in seconds, one year = 31.5 million units.
+So a 1-year age difference (31.5M units) will dwarf the difference between patients who had 1 vs. 10 surgeries (only 9 units apart).
+
+As a result, KNN would group patients based mostly on age, ignoring the number of surgeries, even if surgeries are more predictive of risk.
+
+Feature scaling corrects this by putting both variables on a comparable scale, ensuring the algorithm gives both features fair weight.
+
+Types of Feature Scaling
+1. Standard Scaling (Z-score Normalization)
+
+Formula:
+𝑥′=𝑥−mean(𝑥)std(𝑥)
+x′=std(x)x−mean(x)	​
+
+Centers data around 0 with a standard deviation of 1
+
+Maintains original data distribution shape
+
+Sensitive to outliers, since mean and standard deviation can be affected by extreme values
+
+Commonly used in models assuming normally distributed features (e.g., Linear Regression, Logistic Regression, SVMs)
+
+2. Min-Max Scaling (Normalization)
+
+Formula:
+
+𝑥′=𝑥−min(𝑥)max(𝑥)−min(𝑥)
+x′=max(x)−min(x)x−min(x)	​
+
+Rescales all values into a [0, 1] range
+
+Useful when you need bounded feature values, such as for neural networks
+
+Highly sensitive to outliers — one extreme value can compress the range of all other values
+
+Example:
+If min = 3, max = 100, and x = 40:
+
+𝑥′=40−3100−3=3797≈0.38
+x′=100−340−3​=9737≈0.38
+
+If one data point is 10,000, all other points (0–10) would be squeezed near 0.
+
+3. Robust Scaling
+
+Formula:
+
+𝑥′=𝑥−median(𝑥)IQR
+x′=IQR x−median(x)
+	​
+
+
+where IQR = Interquartile Range (Q3 − Q1)
+
+Uses median and IQR instead of mean and standard deviation
+
+Resistant to outliers — ideal for skewed or heavy-tailed distributions
+
+Does not guarantee values fall between 0 and 1
+
+Choosing the Right Scaling Method
+Method	Best For	Sensitive to Outliers	Output Range
+Standard Scaling	Normally distributed data	Yes	No fixed range
+Min-Max Scaling	Bounded, non-outlier data	Yes	[0, 1]
+Robust Scaling	Data with outliers or skew	No	Variable
