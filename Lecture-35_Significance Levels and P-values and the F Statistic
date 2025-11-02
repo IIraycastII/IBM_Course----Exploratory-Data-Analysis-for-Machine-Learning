@@ -1,0 +1,77 @@
+Lecture-35
+Significance Levels and P-values and the F Statistic
+
+1. F-Statistic in Regression
+
+Null Hypothesis (H₀):
+All coefficients (β₁, β₂, …, βₙ) = 0
+→ Meaning: none of the predictors help explain the target variable better than just using the mean.
+
+Alternative Hypothesis (H₁):
+At least one β ≠ 0
+→ Meaning: adding the predictors does help explain the target variable.
+
+Interpretation:
+The F-statistic measures how much better your regression model fits the data compared to a model that only predicts the mean.
+If your p-value for the F-statistic is small (typically < 0.05), you reject H₀, concluding that your predictors collectively have a significant effect.
+
+2. Type I Error (False Positive)
+
+Type I Error: Rejecting H₀ when it is actually true.
+
+If α = 0.05, there’s a 5% chance of a false positive in any single test.
+
+But — if you run multiple tests, that chance compounds.
+
+Example:
+If you run 10 independent tests,
+Probability of no error = (1 - 0.05)¹⁰ = 0.5987
+So, Probability of at least one Type I error = 1 - 0.5987 = 0.4013 → about 40% chance.
+
+Approximation for small numbers of tests (≤10):
+P(Type I error at least once) ≈ 0.05 × (# tests)
+
+3. Bonferroni Correction
+
+To control this inflation, we adjust the significance threshold (α).
+
+Formula:
+Adjusted α = 0.05 / (# of tests)
+
+Example:
+If you run 10 tests,
+α = 0.05 / 10 = 0.005
+Now, each test must have p < 0.005 to be considered significant.
+
+This reduces the risk of false positives.
+
+But it also reduces power, i.e., the ability to detect real effects.
+→ To compensate, you might need larger sample sizes or stronger effects.
+
+4. Power & Sample Size
+
+Power = 1 - β (where β = probability of Type II error, i.e., failing to reject a false H₀)
+
+Power increases with:
+
+Larger sample size
+
+Larger effect size
+
+Higher α (less strict)
+
+Bonferroni makes α smaller → reduces power → harder to detect true effects.
+
+5. Best Practices
+
+Avoid testing too many hypotheses unnecessarily.
+
+Use Bonferroni (or alternatives like Holm’s method) only when multiple comparisons are genuinely needed.
+
+Always report:
+
+The number of tests
+
+Whether you applied a multiple-comparison correction
+
+The adjusted significance threshold
