@@ -1,0 +1,101 @@
+Lecture-33: 
+Hypothesis Testing Terminology
+
+Key Concepts Introduced
+1. Test Statistic
+
+A test statistic is a value calculated from sample data used to decide whether to accept or reject the null hypothesis.
+It condenses sample evidence into a single numerical value.
+
+Example: The likelihood ratio from the coin-tossing example.
+
+If this ratio exceeds a threshold, we reject 𝐻0(fair coin).
+
+If not, we fail to reject 𝐻0.
+
+2. Rejection Region
+
+The rejection region is the range of test statistic values where the null hypothesis is rejected.
+
+It is determined by the significance level (𝛼α).
+
+Example: For a z-test with 𝛼=0.05
+α=0.05, the rejection region could be 𝑧>1.96 z>1.96 (for a one-tailed test).
+
+3. Acceptance Region
+
+The acceptance (or non-rejection) region is the range of test statistic values for which we accept or fail to reject the null hypothesis.
+
+4. Null Distribution
+
+The null distribution is the probability distribution of the test statistic assuming 𝐻0 is true.
+It’s used to determine how extreme the observed test statistic is and thus whether to reject 𝐻0.
+
+Business Examples of Hypothesis Testing
+Example 1: Marketing Intervention
+
+Goal: Determine if a direct mail marketing campaign impacts customer purchases.
+
+Hypotheses:
+
+𝐻0
+H0: The campaign has no effect on purchases.
+
+𝐻1
+H1: The campaign does impact purchases.
+
+Approach:
+
+Compare purchase rates between those who received the mail vs. those who didn’t.
+
+Use a difference-in-means test or proportion test.
+
+Example 2: Website Layout Test (A/B Testing)
+
+Goal: Determine if a new website layout affects web traffic or conversions.
+
+Hypotheses:
+
+𝐻0
+H0: The layout change has no effect on traffic.
+
+𝐻1
+H1: The layout change does have an effect.
+
+Approach:
+
+Randomly assign users to old vs. new layout groups.
+
+Measure key metrics (click-through rate, conversion rate).
+
+Use a two-sample t-test or z-test.
+
+Example 3: Product Quality / Size Consistency
+
+Goal: Check if products from different factories meet the expected size 𝑆S.
+
+Hypotheses:
+
+𝐻0
+H0: The average product size = 𝑆S.
+
+𝐻1
+H1: The average product size ≠ 𝑆S.
+
+Approach:
+
+Take random samples from factories.
+
+Calculate sample mean and standard deviation.
+
+Conduct a one-sample t-test.
+
+If results fall in the rejection region, product size deviates significantly from 𝑆S.
+
+Recap & Reflection
+
+In this section, we learned:
+
+The definitions and purposes of test statistic, rejection region, acceptance region, and null distribution.
+
+How to interpret hypothesis tests using real-world business examples such as marketing, A/B testing, and quality control.
