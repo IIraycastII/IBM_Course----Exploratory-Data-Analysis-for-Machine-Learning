@@ -1,0 +1,70 @@
+Lecture-36
+Correlation vs Causation
+
+1. Correlation vs. Causation
+Correlation
+
+Two variables move together — when one changes, the other tends to change too.
+
+However: this does not imply that one causes the other.
+
+Useful for prediction, but not for understanding why.
+
+Example:
+Rain and temperature are correlated, but the direction or cause depends on geography and the underlying weather mechanisms.
+
+Causation
+
+There is a cause-and-effect relationship.
+Changing X actually changes Y.
+
+Requires an underlying mechanism or experiment to confirm.
+
+Example:
+Studying more causes better test performance (not the other way around).
+
+2. When Correlation Happens
+
+Correlation between X and Y can exist for multiple reasons:
+
+Case	Explanation	Example
+X causes Y	The ideal case — genuine causal effect	Marketing spend increases revenue
+Y causes X	Reverse causation	Higher revenue lets you increase marketing budget
+Both caused by a third variable (confounder)	A hidden variable influences both X and Y	Holiday season increases both marketing spend and revenue
+Spurious/random correlation	Pure coincidence in a sample	Ice cream sales and drowning incidents both increase with temperature
+3. Confounding Variables
+
+A confounding variable affects both X and Y, making them appear correlated even though there’s no direct causal link.
+
+Examples:
+
+Car accidents and number of people named John
+→ Confounder: population size
+
+Ice-cream sales and drownings
+→ Confounder: temperature
+
+Factories owned and chips sold
+→ Confounder: market demand
+
+Key idea: A confounder can create false signals of causality.
+
+4. Spurious Correlations
+
+These are coincidental relationships that occur due to random patterns or shared trends (like both variables increasing over time).
+
+Examples:
+
+Age of Miss America ↔ Murders by steam, hot vapors, and hot objects (r = 0.87)
+
+Non-commercial space launches ↔ Sociology PhDs awarded
+
+These correlations are statistically strong but meaningless causally.
+
+5. Predictive Value vs. Causal Value
+
+Even if a variable correlates with an outcome, it can be useful for prediction in machine learning or regression.
+
+But — if you manipulate X expecting Y to change, and X is not truly causal, your intervention will fail.
+
+That’s why understanding the mechanism (how and why X influences Y) is essential.
