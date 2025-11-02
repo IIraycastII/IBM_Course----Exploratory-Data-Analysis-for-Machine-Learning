@@ -1,0 +1,46 @@
+Lecture-28
+Introduction to Hypothesis
+
+Concept Overview:
+Hypothesis testing is a statistical procedure used to make inferences about population parameters (such as the mean of a Poisson distribution) based on sample data. It helps determine whether the observed data provides enough evidence to support or reject a specific assumption about the population.
+
+Key Components:
+
+Hypothesis Definition:
+
+A hypothesis is a statement about a population parameter.
+
+Example: The average number of customers arriving per hour is 5.
+
+Two Competing Hypotheses:
+
+Null Hypothesis (H₀): The baseline or specific claim (e.g., mean = 5).
+
+Alternative Hypothesis (H₁): Represents a deviation from the null (e.g., mean > 5 or mean ≠ 5).
+
+The null is typically the more specific statement, while the alternative is broader (e.g., “greater than” or “not equal to”).
+
+Decision Process:
+
+Based on sample data, we decide to reject or fail to reject the null hypothesis.
+
+It’s often said you can reject the null but never truly accept the alternative—you just proceed as if it’s more likely.
+
+Frequentist vs Bayesian Interpretation:
+
+Frequentist: Uses a test statistic and compares it to a decision boundary to decide whether to reject H₀.
+
+Bayesian: Does not use a hard boundary—instead, it computes posterior probabilities of both hypotheses and identifies which one is more likely given the observed data.
+
+Example (Motivation):
+
+Consider a coin-flip experiment or a queue at a grocery store.
+We might hypothesize that the average number of arrivals per hour is 5. After collecting sample data, hypothesis testing helps determine whether the true average is likely still 5 (null) or if it’s significantly higher (alternative).
+
+Takeaway:
+
+Hypothesis testing is the bridge between data and decision-making.
+
+It formalizes uncertainty and gives a structured way to test assumptions.
+
+The Bayesian version enhances this by continuously updating beliefs as more data becomes available.
