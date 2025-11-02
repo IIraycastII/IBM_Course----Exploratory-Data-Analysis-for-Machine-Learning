@@ -1,0 +1,95 @@
+Lecture 20
+Feature Encoding
+
+Learning Goals
+
+In this lecture, we’ll learn how to convert categorical and ordinal variables into numeric representations that machine learning models can process effectively. We’ll cover:
+
+Understanding variable selection and its role in model preparation
+
+Distinguishing between categorical (nominal) and ordinal data
+
+Applying different encoding techniques — binary, one-hot, and ordinal encoding
+
+Recognizing when to use each encoding method based on feature type and model requirements
+
+Variable Selection and Preparation
+
+Before including variables in a model, we must ensure they’re in a usable numeric format. This may involve:
+
+Transformation (e.g., log or polynomial transformations)
+
+Encoding (converting categorical data to numeric form)
+
+Scaling (standardizing numeric ranges)
+
+The appropriate approach depends on the data type and the model’s sensitivity to scale and category representation.
+
+Understanding Encoding
+
+Most machine learning models cannot interpret text-based or symbolic data directly. Encoding converts such categorical or ordinal values into numerical formats without losing their underlying meaning.
+
+There are two main types of categorical features:
+
+Nominal features: Categories without inherent order, e.g., red, blue, green, male/female
+
+Ordinal features: Categories with a meaningful order, e.g., low, medium, high or cold, warm, hot
+
+Binary Encoding
+
+Used for two-category variables, converting them into 0 or 1 values.
+Examples:
+
+Married (True/False) → 1 or 0
+
+Gender (Male/Female) → 1 or 0
+
+Binary encoding is simple and efficient for features with only two distinct values.
+
+One-Hot Encoding
+
+Used for nominal variables with multiple possible categories.
+Each category becomes its own binary column.
+
+Example:
+
+Color	Red	Blue	Green
+Red	1	0	0
+Blue	0	1	0
+Green	0	0	1
+
+Expands one categorical column into several binary columns
+
+Prevents false ordering between categories
+
+Useful for most models that handle independent categorical variables
+
+Ordinal Encoding
+
+Used for ordered categorical data, converting each category into an integer representing its rank or level.
+
+Example:
+
+Temperature	Encoded
+Low	1
+Medium	2
+High	3
+
+This preserves order information, but assumes equal distance between categories (e.g., between low and medium, medium and high).
+Careful consideration is required—if the spacing between levels isn’t uniform, ordinal encoding may misrepresent relationships.
+
+Choosing Between One-Hot and Ordinal Encoding
+
+Use One-Hot Encoding when:
+
+Categories have no order
+
+You want to avoid introducing false hierarchy
+
+The number of categories is small to moderate
+
+Use Ordinal Encoding when:
+
+Categories have a meaningful progression
+
+You want to preserve order for models that can interpret numeric scales
