@@ -1,0 +1,92 @@
+Lecture-32
+Type 1 vs Type 2 error: examples
+
+In this lecture we’ll review important hypothesis-testing terminology and see concrete business examples that show how to apply these concepts. By the end you should be able to:
+
+Compute and interpret a test statistic
+
+Define rejection and acceptance regions and the null distribution
+
+Apply hypothesis-testing logic to marketing, web A/B, and product-quality problems
+
+Sketch the data you’d collect and the EDA you’d run before testing
+
+Key Terms
+
+Test statistic
+
+A scalar summary computed from sample data that we use to decide whether to reject 𝐻0
+
+Examples: z-score, t-statistic, likelihood ratio (coin example).
+
+The test statistic converts raw sample evidence into a single value compared against a decision rule.
+
+Rejection region (critical region)
+
+The set of test-statistic values for which we reject the null hypothesis.
+
+Defined by the chosen significance level (e.g., 
+𝛼
+=
+0.05
+α=0.05) or an equivalent decision boundary.
+
+Acceptance region
+
+The complement of the rejection region: values for which we fail to reject (accept) 𝐻0.
+Null distribution
+
+The probability distribution of the test statistic assuming 𝐻0 is true.
+
+Used to compute p-values or critical thresholds.
+
+Business Examples & How to Frame the Tests
+
+Marketing Campaign Effect
+
+Question: Does a direct-mail campaign increase purchase rate?
+
+Hypotheses:
+
+𝐻0: Campaign has no effect (purchase rate unchanged).
+H1: Campaign increases purchase rate.
+
+Data to collect: Randomized treatment/control groups, purchases within time window, covariates (customer segment, spend history).
+
+EDA: Baseline balance check, purchase-rate histograms, conversion over time.
+
+Test/statistic: Difference in proportions (z-test) or logistic regression coefficient + Wald test.
+
+Website Layout A/B Test
+
+Question: Does the new layout affect traffic or conversion?
+
+Hypotheses:
+
+𝐻0: No change in traffic/conversion.
+
+𝐻1: Layout causes a change (two-sided) or improvement (one-sided).
+
+Data to collect: Randomized user assignment, session metrics, conversion events, time of day.
+
+EDA: Time-series plots, segment-level effects, bounce-rate distributions.
+
+Test/statistic: t-test or proportion test; or regression with treatment indicator.
+
+Product Quality / Size Check
+
+Question: Are products meeting size standard 𝑆S?
+
+Hypotheses:
+
+𝐻0: Mean size = 𝑆
+S (within tolerance).
+
+𝐻1: Mean size ≠ 𝑆
+S (out of spec).
+
+Data to collect: Random samples from production lots/sources, measurement uncertainty.
+
+EDA: Boxplots by factory, distribution / outlier checks, measurement repeatability analysis.
+
+Test/statistic: One-sample t-test (or ANOVA if comparing factories).
