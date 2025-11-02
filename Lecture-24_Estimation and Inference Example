@@ -1,0 +1,95 @@
+Lecture 24: 
+Estimation and Inference Example
+
+Learning Goals
+
+In this lecture, we’ll apply what we learned about estimation and inference using a real-world dataset.
+We’ll explore how to perform Exploratory Data Analysis (EDA) on customer churn data to understand patterns, relationships, and insights that inform statistical and predictive models.
+
+By the end of this lecture, you’ll learn how to:
+
+Analyze customer churn behavior using the Telco Customer Churn dataset
+
+Visualize relationships between churn rate and customer characteristics
+
+Use Pandas, Matplotlib, and Seaborn for exploratory visualizations
+
+Interpret insights that connect estimation and inference to real business problems
+
+Dataset Overview
+
+We’ll use the Telco Customer Churn dataset from IBM Cognos Analytics, which represents customer characteristics and churn outcomes for a fictional telecommunications company.
+
+Key features include:
+
+Account type and payment method
+
+Customer demographics and satisfaction scores
+
+Revenue per customer and customer lifetime value (CLTV)
+
+Churn indicators — whether a customer left (active cancellation, non-renewal, etc.)
+
+For this example, we’ll use the phone subscription subset, stored in a Pandas DataFrame called df_phone.
+
+1. Churn by Payment Type
+
+We begin by examining how payment method relates to churn likelihood.
+
+import seaborn as sns
+sns.barplot(x="payment_type", y="churn_value", data=df_phone, ci=None)
+
+
+This bar plot compares average churn rates across payment types.
+
+Insight:
+Customers who pay via credit card are less likely to churn than those who use bank withdrawals or mailed checks.
+This quick estimate gives an initial clue about feature importance and customer behavior.
+
+2. Churn by Customer Tenure
+
+To explore how time as a customer affects churn, we create tenure groups using pd.cut:
+
+import pandas as pd
+df_phone["tenure_bins"] = pd.cut(df_phone["tenure_months"], bins=5)
+sns.barplot(x="tenure_bins", y="churn_value", data=df_phone, ci=None)
+
+
+Interpretation:
+Customers with shorter tenures are much more likely to churn, while long-term customers show higher retention.
+This aligns with common business intuition — loyalty increases with tenure.
+
+3. Exploring Relationships with Pair Plots
+
+We use Seaborn’s pairplot() to visualize relationships between numerical variables:
+
+sns.pairplot(df_phone, vars=["tenure_months", "gb_usage", "total_revenue", "cltv"],
+             hue="churn_value")
+
+
+Observations:
+
+Green points (churned customers) often cluster around lower tenures and lower revenues.
+
+Blue points (retained customers) tend to have higher CLTV and longer tenure.
+
+Distributions visually confirm trends between churn and key metrics.
+
+This helps us estimate correlations and identify influential variables for future modeling.
+
+4. Joint Plot with Hexbins
+
+Finally, we use a joint plot with hexbin visualization to analyze the relationship between tenure in months and monthly charges:
+
+sns.jointplot(x="tenure_months", y="monthly_charge", data=df_phone, kind="hex")
+
+
+Interpretation:
+
+Densely packed regions (darker hexagons) represent concentrations of customers.
+
+Most customers have high tenure and higher monthly charges, suggesting premium customers are more loyal.
+
+Another dense region at low tenure and high charges indicates new, high-paying customers who might churn early.
+
+This gives both estimation insights (who’s likely to churn) and inference context (why they might churn).
