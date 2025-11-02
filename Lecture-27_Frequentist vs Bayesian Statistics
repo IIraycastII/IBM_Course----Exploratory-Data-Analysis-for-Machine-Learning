@@ -1,0 +1,142 @@
+Lecture 27: 
+Frequentist vs Bayesian Statistics (Expanded with Business Context — Queuing Theory Example)
+
+Learning Goals
+
+By the end of this lecture, you will understand:
+
+The conceptual and mathematical difference between Frequentist and Bayesian statistics.
+
+How both frameworks apply to business scenarios, specifically queuing theory — e.g., determining staffing or server needs.
+
+How prior knowledge and data volume influence estimation and inference.
+
+1. Introduction: Two Philosophies of Probability
+
+At the foundation of all statistical reasoning lies a key question:
+
+What does “probability” mean?
+
+For Frequentists, probability represents the frequency of an event occurring over repeated experiments.
+
+For Bayesians, probability represents a belief or degree of certainty about a parameter, updated as new evidence arrives.
+
+Both use the same mathematical tools (likelihood, distribution functions, etc.), but they interpret them differently.
+
+2. Frequentist Statistics — Relying Purely on Data
+
+In the Frequentist world:
+
+Parameters (like the true mean, variance, or λ in a Poisson process) are fixed but unknown.
+
+The data we observe is random, as it represents one of many possible samples from the population.
+
+We use repeated sampling and long-run frequencies to make inferences.
+
+In short:
+
+“The probability of an event is the proportion of times it would occur if we repeated the experiment infinitely many times.”
+
+Example: Queuing Theory in a Frequentist Framework
+
+Imagine managing a grocery store checkout system.
+You want to know how many cashiers to schedule per hour.
+
+Let’s model the number of customers arriving per minute using a Poisson distribution (common for count-based, time-dependent events).
+
+You don’t assume any prior knowledge.
+You simply observe data — say, customer arrivals every minute for 30 days.
+
+A Frequentist would:
+
+Calculate the mean rate (λ) from this data — e.g., 4 customers per minute.
+
+Treat λ as a fixed but unknown true rate.
+
+Use confidence intervals to describe uncertainty.
+
+For example:
+
+“We are 95% confident that the true arrival rate lies between 3.7 and 4.3 customers per minute.”
+
+This conclusion depends purely on data, not on any prior belief or historical assumptions.
+
+3. Bayesian Statistics — Combining Prior Beliefs with Data
+
+The Bayesian framework views parameters as random variables — each having its own probability distribution.
+Instead of being fixed, the parameter (like λ) can take on multiple plausible values, each with a probability.
+
+We begin with a prior belief — a distribution representing our knowledge before seeing new data.
+Then we use Bayes’ theorem to update this belief after observing data.
+
+𝑃(Parameter∣Data)=𝑃(Data∣Parameter)×𝑃(Parameter)𝑃(Data)
+P(Parameter∣Data)=P(Data)P(Data∣Parameter)×P(Parameter)
+	​
+
+Example: Queuing Theory in a Bayesian Framework
+
+Let’s revisit the same grocery store.
+
+Suppose you already have prior experience suggesting that, historically, around 5 customers per minute tend to arrive.
+That’s your prior distribution for λ.
+
+Now, after collecting new data, you find that during this month, the rate appears to be slightly lower — around 4 customers per minute.
+
+The Bayesian process is:
+
+Start with a prior: λ ~ belief centered at 5.
+
+Collect data: observe sample data indicating 4 per minute.
+
+Update: apply Bayes’ theorem to get a posterior distribution — your updated belief about λ, now centered closer to 4.3.
+
+Over time, as you collect more data:
+
+The posterior distribution becomes narrower, indicating higher confidence.
+
+The influence of the prior diminishes — data dominates.
+
+This is one of Bayesian statistics’ key strengths:
+
+You can incorporate expert knowledge and keep updating your beliefs as real data arrives.
+
+4. Comparing Frequentist vs Bayesian Thinking
+Aspect	Frequentist	Bayesian
+Philosophy	Probability = long-run frequency	Probability = degree of belief
+Parameter treatment	Fixed but unknown constant	Random variable with a probability distribution
+Role of prior knowledge	Ignored — only data matters	Incorporated through prior distributions
+Uncertainty expression	Confidence intervals (based on resampling)	Posterior distributions (belief updates)
+Computation	Typically analytical, faster	Often uses computational methods (e.g., MCMC)
+Interpretation	“We are 95% confident this interval contains the true parameter.”	“There’s a 95% probability the parameter lies within this interval.”
+When useful	Large datasets, frequent experiments	Small datasets, domain expertise, or sequential updates
+5. Mathematical Summary
+
+Frequentist:
+
+𝑃(Data∣𝜃)P(Data∣θ)
+
+→ “Given θ, how likely is this data?”
+
+Bayesian:
+
+𝑃(𝜃∣Data)=𝑃(Data∣𝜃)×𝑃(𝜃)𝑃(Data)
+P(θ∣Data)=P(Data)P(Data∣θ)×P(θ)
+	​
+
+
+→ “Given this data, how likely is each possible θ?”
+
+6. Interpretation Difference Simplified
+Question	Frequentist Answer	Bayesian Answer
+What is λ (average arrivals per minute)?	A fixed value estimated from repeated samples.	A probability distribution expressing belief in possible λ values.
+What is uncertainty?	Sampling variability.	Uncertainty in our belief about the parameter.
+How to improve certainty?	Collect more data.	Collect more data or refine priors with expert knowledge.
+7. Key Takeaways
+
+Frequentist inference depends only on the data — it assumes no prior knowledge and focuses on repeatable, long-run frequencies.
+
+Bayesian inference allows for prior beliefs to guide early estimates, updating them as new data comes in.
+
+In real-world business settings (like queuing, forecasting, or customer behavior modeling), Bayesian methods shine when you have limited data but domain expertise — while Frequentist methods are efficient when large amounts of data are available.
+
+Both approaches use similar mathematics but differ fundamentally in interpretation and philosophy.
