@@ -1,0 +1,128 @@
+Lecture 26: 
+Frequentist vs Bayesian Statistics
+
+Learning Goals
+
+In this lecture, we’ll explore two major schools of thought in statistics:
+Frequentist and Bayesian.
+
+By the end, you’ll understand how both frameworks approach uncertainty, probability, and inference — and how they differ in interpreting the same data.
+
+1. Two Views of Probability
+
+At the heart of this topic lies a philosophical difference in how each framework defines probability:
+
+Perspective	Definition of Probability	Example Interpretation
+Frequentist	Long-run frequency of events	“If we flip this coin 1,000 times, the probability of heads is the proportion of heads we observe.”
+Bayesian	Degree of belief (subjective probability)	“Based on what I know, I believe there’s a 60% chance this coin will land heads.”
+2. The Frequentist Approach
+
+In the Frequentist framework:
+
+Probability is objective and based on repeated experiments.
+
+Parameters (like the mean or proportion) are fixed but unknown constants.
+
+Data is considered random, because it’s drawn from a population.
+
+You don’t talk about “the probability that a parameter is X.”
+Instead, you talk about the probability of seeing your data given that parameter.
+
+Formally, Frequentists compute:
+
+𝑃
+(
+Data
+∣
+Parameter
+)
+P(Data∣Parameter)
+
+That is — “Given a true parameter, what is the probability that we observed this data?”
+
+Example:
+
+Suppose we want to estimate the average customer spending.
+A Frequentist would say:
+
+“The true mean spending exists, but we don’t know it. Let’s estimate it from our sample.”
+
+They would compute a confidence interval, which tells us:
+
+“If we repeated this sampling process 100 times, the true mean would fall inside this range about 95 times.”
+
+3. The Bayesian Approach
+
+In the Bayesian framework:
+
+Probability reflects our belief or uncertainty about parameters.
+
+Parameters are random variables with their own probability distributions.
+
+We update our beliefs as new data comes in — using Bayes’ theorem.
+
+The formula is:
+𝑃(Parameter∣Data)=𝑃(Data∣Parameter)×𝑃(Parameter)𝑃(Data)
+P(Parameter∣Data)=P(Data)P(Data∣Parameter)×P(Parameter)
+	​
+
+
+Here’s what each term means:
+
+Term	Meaning
+
+𝑃(Parameter)
+P(Parameter)	Prior — what we believed before seeing any data
+𝑃(Data∣Parameter)
+P(Data∣Parameter)	Likelihood — how probable the data is, given a certain parameter
+𝑃(Parameter∣Data)
+P(Parameter∣Data)	Posterior — updated belief after seeing data
+𝑃(Data)
+P(Data)	Normalizing constant to ensure probabilities sum to 1
+Example:
+
+Imagine you run an online store and you believe that 5% of customers churn per month.
+That’s your prior belief.
+
+After observing a month of data showing 8% churn, you update your belief:
+
+“Given this new data, I now believe the churn rate is likely between 6% and 9%.”
+
+That updated belief is your posterior.
+
+4. Key Differences Between the Two
+Concept	Frequentist	Bayesian
+Probability Interpretation	Long-run frequency of outcomes	Degree of belief
+Parameters	Fixed but unknown constants	Random variables with distributions
+Data	Random sample	Observed evidence used to update beliefs
+Output	Confidence intervals, p-values	Posterior distributions
+New Data Handling	Entire analysis redone	Use Bayes’ theorem to update prior
+Example Tool	t-tests, ANOVA, regression	Bayesian inference, MCMC, posterior sampling
+5. Real-World Business Example
+
+Let’s revisit customer churn prediction.
+
+Frequentist View:
+
+You estimate churn probability using logistic regression.
+
+You compute confidence intervals for coefficients.
+
+You state: “With 95% confidence, tenure has a negative impact on churn.”
+
+Bayesian View:
+
+You assign priors — e.g., “Customers with higher tenure are likely to stay.”
+
+You update this belief as new churn data arrives each month.
+
+You can continuously refine your posterior distribution for churn probability.
+
+This makes the Bayesian approach particularly powerful in dynamic environments, like real-time analytics or financial forecasting.
+
+6. When to Use Each
+Situation	Recommended Approach
+Large datasets with simple models	Frequentist (faster, fewer assumptions)
+Small datasets or complex models	Bayesian (can incorporate prior knowledge)
+Real-time updating or sequential learning	Bayesian
+Classical hypothesis testing	Frequentist
