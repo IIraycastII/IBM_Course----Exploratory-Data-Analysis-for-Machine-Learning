@@ -1,0 +1,84 @@
+Lecture-30
+Bayesian representation of Hypothesis testing example
+
+Concept Overview:
+This section explains how Bayesian hypothesis testing builds upon the coin-toss example by incorporating prior beliefs (priors) into our decision-making process. Unlike the frequentist approach, Bayesian inference updates our belief about which hypothesis is more likely after seeing the data, producing a posterior probability for each hypothesis.
+
+Setup:
+
+We have two coins:
+
+Coin 1: 
+𝑃(heads)=0.5
+P(heads)=0.5
+
+Coin 2: 
+𝑃(heads)=0.7
+P(heads)=0.7
+
+One coin is chosen at random (we don’t know which) and tossed 10 times.
+
+Based on the number of heads observed, we estimate which coin is more likely to have been chosen.
+
+Step 1: Define Priors
+
+Since the coin was chosen randomly, we start with equal priors:
+
+𝑃(𝐻1)=0.5 and 𝑃(𝐻2)=0.5
+P(H1)=0.5 and P(H2)=0.5
+
+meaning both coins are equally likely before observing any data.
+
+However, if we were drawing from real-world coins (where most are fair), our prior for the fair coin could be much higher — for example,
+𝑃(𝐻1)=0.99,
+𝑃(𝐻2)=0.01
+P(H1)=0.99,P(H2)=0.01
+
+making it harder to conclude bias unless the data strongly supports it.
+
+Step 2: Apply Bayes’ Rule
+
+We use Bayes’ theorem to update our belief about each hypothesis after observing the data (e.g., 3 heads in 10 tosses):
+
+𝑃(𝐻𝑖∣data)=𝑃(data∣𝐻𝑖)⋅𝑃(𝐻𝑖)𝑃(data)
+P(Hi∣data)=P(data)P(data∣Hi)⋅P(Hi)​
+
+𝑃(data∣𝐻𝑖)
+P(data∣Hi) = likelihood of observing the data under hypothesis 𝐻𝑖Hi	​
+
+𝑃(𝐻𝑖)P(Hi) = prior belief before seeing the data
+
+𝑃(𝐻𝑖∣data)P(Hi​∣data) = posterior probability, our updated belief
+
+The denominator 
+𝑃(data)
+P(data) just normalizes probabilities — it’s not essential for comparing hypotheses.
+
+Step 3: Likelihood Ratio and Updating
+
+The likelihood ratio compares how likely the observed data is under each hypothesis:
+
+Likelihood Ratio=𝑃(data∣𝐻1)𝑃(data∣𝐻2)
+Likelihood Ratio=P(data∣H2)P(data∣H1)
+	​
+
+
+In Bayesian analysis, we multiply the priors by this likelihood ratio to get the posterior odds:
+
+Posterior Odds
+=
+Prior Odds
+×
+Likelihood Ratio
+Posterior Odds=Prior Odds×Likelihood Ratio
+
+If the priors are equal (50/50), they cancel out — so the decision depends solely on the data.
+If priors are unequal (e.g., 0.99 vs 0.01), much stronger evidence is needed to favor the less probable hypothesis.
+
+Key Idea:
+
+Likelihood Ratio → comes from data.
+
+Priors → come from prior belief or experience.
+
+Posteriors → updated probabilities after combining both.
