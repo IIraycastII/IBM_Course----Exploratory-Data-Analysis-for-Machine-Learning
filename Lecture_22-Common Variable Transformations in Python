@@ -1,0 +1,76 @@
+Lecture 22 
+Common Variable Transformations in Python
+
+Learning Goals
+
+In this lecture, we’ll learn how to apply different types of variable transformations in Python depending on the feature type. Specifically, we’ll cover:
+
+Scaling transformations for continuous numerical values
+
+Encoding techniques for categorical and ordinal data
+
+Practical implementations using Scikit-learn and Pandas
+
+Continuous Numerical Features
+
+For continuous numerical data, scaling ensures that all features contribute equally to model training.
+
+Common Scaling Techniques
+
+Transformation	Purpose	Python Function
+Standard Scaling	Centers data around mean 0, std 1	StandardScaler
+Min-Max Scaling	Scales data to a fixed range (usually 0–1)	MinMaxScaler
+Robust Scaling	Reduces impact of outliers using median and IQR	RobustScaler
+
+Example:
+
+from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
+
+scaler = StandardScaler()
+scaled_data = scaler.fit_transform(data)
+
+Nominal (Categorical) Features
+
+These are unordered categories, such as “Red,” “Blue,” “Green,” or “True/False.”
+We use encoding to convert them into numerical form.
+
+Encoding Techniques
+
+Method	When to Use	Python Function
+Binary Encoding	Two unique categories	LabelBinarizer
+One-Hot Encoding	Multiple unique categories	OneHotEncoder or pd.get_dummies()
+Label Encoding	Simple label-to-number conversion	LabelEncoder
+
+Example using Pandas:
+
+import pandas as pd
+pd.get_dummies(df['color'])
+
+
+This converts one categorical column into multiple binary columns.
+
+Ordinal Features
+
+These are ordered categories, such as “Low,” “Medium,” “High.”
+Here, the order matters — higher numbers represent higher ranks.
+
+Encoding Techniques
+
+Method	Description	Python Function
+Ordinal Encoding	Assigns integers based on order	OrdinalEncoder
+Dictionary Vectorization	Maps predefined numeric values	DictVectorizer
+
+Example:
+
+from sklearn.preprocessing import OrdinalEncoder
+
+encoder = OrdinalEncoder(categories=[['Low', 'Medium', 'High']])
+encoded_data = encoder.fit_transform(df[['rating']])
+
+Additional Transformations
+
+For continuous features, you can also apply transformations to linearize relationships:
+
+Transformation	Use Case
+Polynomial Transformation	Adds higher-degree terms to model non-linearity
+Log Transformation	Reduces skewness and stabilizes variance
