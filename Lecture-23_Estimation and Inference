@@ -1,0 +1,87 @@
+Lecture 23:
+Estimation and Inference
+
+Learning Goals
+
+In this lecture, we’ll explore fundamental statistical concepts that form the backbone of machine learning and data-driven decision-making. By the end of this lecture, you’ll understand:
+
+The difference between estimation and inference in statistics
+
+The distinction between parametric and non-parametric modeling approaches
+
+Common statistical distributions seen in real-world data
+
+The conceptual difference between frequentist and Bayesian statistics
+
+Estimation vs. Inference
+
+Estimation focuses on calculating a point estimate — a single number representing a population parameter (like the mean) based on sample data.
+
+Example of estimation (sample mean):
+
+𝑥ˉ=∑𝑥𝑖𝑛
+xˉ=n∑xi
+
+Here, you sum all sample values and divide by the total number of observations to estimate the average.
+
+Inference, on the other hand, goes beyond point estimates.
+It involves drawing conclusions about the population, including uncertainty measures such as the standard error or confidence intervals.
+
+The standard error measures how much our sample mean might vary from the true population mean — essentially, it captures the "average distance" of our estimates from the true parameter.
+
+Connecting Statistics and Machine Learning
+
+Machine learning and statistical inference share a deep connection:
+
+Both use sample data to infer properties about a larger population.
+
+A data-generating process (like a linear model) defines how features 
+𝑋
+X relate to target 
+𝑌
+Y.
+
+In statistical inference, we often seek to understand underlying parameters and their effects.
+
+In machine learning, we may care more about prediction accuracy than understanding each parameter.
+
+In short:
+
+Inference focuses on understanding why and how,
+Machine learning often focuses on what and how well.
+
+Business Example: Customer Churn
+
+To ground these concepts, let’s consider a real-world scenario — predicting customer churn.
+
+Goal: Identify whether a customer is likely to leave a company.
+
+Target variable: churn (1 if the customer left, 0 if not)
+
+Features: Customer tenure, purchase history, spending amount, age, location, etc.
+
+Machine learning models can output a churn probability for each customer:
+
+Example: 0.99 → very likely to leave, 0.01 → likely to stay.
+
+Estimation in Context
+
+When estimating, we might compute the impact of each feature on churn.
+For instance:
+
+“Each additional year as a customer reduces churn probability by 20%.”
+
+That 20% is a point estimate — our best guess based on sample data.
+
+Inference in Context
+
+Inference extends this estimate by adding uncertainty bounds — giving us a confidence interval.
+
+Example:
+
+“With 95% confidence, each additional year reduces churn by between 19% and 21%.”
+
+This tells us that the estimate (20%) is statistically reliable.
+
+If the interval were wide — say, between -10% and 50% — we’d know our estimate isn’t statistically significant.
+It could even mean we don’t have enough data to be confident about the direction of the effect.
