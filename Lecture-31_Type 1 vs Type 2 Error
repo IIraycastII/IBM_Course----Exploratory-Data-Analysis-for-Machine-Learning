@@ -1,0 +1,81 @@
+Lecture-31
+Type 1 vs Type 2 Error
+
+Concept Overview:
+In this section, we explore the Neyman-Pearson hypothesis testing framework, focusing on Type I and Type II errors, test power, and a real-world business example to illustrate their implications. This approach is non-Bayesian, meaning it evaluates hypotheses purely from sample data without incorporating prior beliefs.
+
+1. Core Concepts
+Hypothesis Testing Setup
+
+Null Hypothesis (𝐻0): The default assumption — e.g., “the coin is fair” or “there is no relationship.”
+
+Alternative Hypothesis (𝐻1): Represents the effect or difference we’re testing for — e.g., “the coin is biased” or “customers with longer tenure are less likely to churn.”
+
+Two Possible Errors
+Error Type	Definition	Example
+Type I Error (False Positive)	Rejecting the null hypothesis when it is actually true.	Concluding the coin is biased when it is, in fact, fair.
+Type II Error (False Negative)	Failing to reject the null hypothesis when it is actually false.	Concluding the coin is fair when it is actually biased.
+2. Test Power
+
+The power of a test is defined as:
+
+Power=1−𝑃(Type II Error)
+Power=1−P(Type II Error)
+
+It measures the probability of correctly rejecting the null hypothesis when it is false — i.e., detecting a true effect.
+
+High Power → More likely to catch true effects, but may increase Type I errors if the threshold for rejection is too lenient.
+
+Low Power → Safer from false positives but more likely to miss real effects.
+
+Trade-off: Increasing sensitivity to detect an effect (higher power) usually raises the risk of false alarms (Type I errors).
+
+3. Illustrative Example — Coin Toss
+
+𝐻0: The coin is fair (𝑝=0.5 p=0.5).
+
+𝐻1​: The coin is biased (𝑝≠0.5, p=0.5).
+
+Type I Error: Declaring the coin biased when it’s actually fair.
+
+Type II Error: Declaring the coin fair when it’s actually biased.
+
+Adjusting the rejection threshold (e.g., how extreme our results must be) changes the balance between Type I and Type II errors.
+
+4. Real-World Example — Customer Churn Prediction
+Scenario:
+
+A business wants to predict whether long-term customers (over 2 years) are less likely to churn.
+
+Null Hypothesis (𝐻0): Churn behavior is due to chance — tenure has no effect.
+
+Alternative Hypothesis (𝐻1): Customers with >2 years tenure are less likely to churn.
+
+Error Interpretations:
+Error Type	What It Means	Business Consequence
+Type I Error	Incorrectly rejecting 𝐻0
+	​
+
+ → Concluding tenure affects churn when it doesn’t.	Misallocating resources toward loyalty programs that don’t truly reduce churn.
+Type II Error	Failing to reject 𝐻0
+
+	​
+
+ → Missing a real effect of tenure on churn.	Losing long-term customers due to not investing in retention strategies that actually work.
+Power of the Test:
+
+A powerful model would correctly detect that tenure affects churn (reject 𝐻0 when 𝐻1 is true).
+
+The cutoff criteria (e.g., significance level 
+𝛼
+α) determine the balance between detecting true effects and avoiding false positives.
+
+5. Key Takeaways
+
+Type I Error (α): False alarm — finding an effect that isn’t real.
+
+Type II Error (β): Missed detection — failing to find a real effect.
+
+Power (1 - β): Ability to correctly detect true effects.
+
+Choosing the right balance between α and β depends on context — in medicine, avoiding Type I errors might be crucial; in marketing, minimizing Type II errors could be more valuable.
