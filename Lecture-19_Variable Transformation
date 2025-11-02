@@ -1,0 +1,97 @@
+Lecture 19
+Variable Transformation
+
+Learning Goals
+
+In this lecture, we’ll learn how to use mathematical transformations to make data more suitable for linear models by improving normality, reducing skewness, and enabling the model to capture complex relationships. We’ll cover:
+
+Understanding why transformations are needed for linear regression
+
+Applying log and Box-Cox transformations to normalize data
+
+Modeling non-linear relationships with polynomial features
+
+Using scikit-learn’s PolynomialFeatures for higher-order transformations
+
+Why Variable Transformation Matters
+
+Linear regression assumes that the residuals (errors) of the model are normally distributed. However, real-world data often has positive or negative skew, violating this assumption.
+Variable transformations help:
+
+Normalize skewed data
+
+Improve model performance
+
+Ensure residuals are closer to a normal distribution
+
+This leads to more reliable and interpretable regression models.
+
+Logarithmic and Box-Cox Transformations
+
+A log transformation is commonly used to reduce right (positive) skew.
+
+Example: Applying np.log() or np.log1p() (log(x+1) to handle zeros)
+
+This changes the data distribution to be more normal and stabilizes variance
+
+A Box-Cox transformation is a more flexible method that automatically finds the best way to make the data approximately normal.
+
+Example process:
+
+Start with a positively skewed dataset
+
+Apply a log transformation → distribution becomes more symmetric
+
+Transformed data can now better satisfy model assumptions
+
+Even after transformation, the regression model remains linear, as the output still represents a linear combination of the transformed features.
+
+Modeling Nonlinear Relationships
+
+Sometimes, relationships between variables are not linear—for example, diminishing returns:
+
+Increasing a movie budget may not linearly increase box office revenue
+
+Beyond a certain point, more budget adds less revenue gain
+
+In such cases, using log(x) instead of x can help reveal a linear pattern.
+Alternatively, we can create polynomial features (like x², x³) to model curved relationships while keeping the regression model linear in its parameters.
+
+Polynomial Features
+
+Polynomial transformations add new features that represent powers of existing features.
+Example:
+
+Original feature: x (budget)
+
+Transformed features: x, x², x³
+
+This allows the model to capture:
+
+Diminishing returns (1 inflection point with x²)
+
+Complex curves (multiple inflection points with higher powers)
+
+The model remains linear in terms of coefficients, but nonlinear in data representation.
+
+Implementing Polynomial Transformation (scikit-learn)
+
+We use PolynomialFeatures from sklearn.preprocessing to create these higher-order terms.
+
+Example:
+
+from sklearn.preprocessing import PolynomialFeatures
+
+# Create a polynomial feature transformer
+polyFeat = PolynomialFeatures(degree=2)
+
+# Fit and transform data
+polyFeat.fit(X_data)
+X_poly = polyFeat.transform(X_data)
+
+
+polyFeat.fit(X_data) learns from the original data
+
+polyFeat.transform(X_data) creates new features (x, x², …)
+
+The resulting X_poly can be used in a linear regression model
